@@ -1,17 +1,180 @@
 ---
-
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Hero from '../components/Hero.astro';
+import ProjectGrid from '../components/ProjectGrid.astro';
+import '../styles/global.css';
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout>
+  <Navbar />
+  <Hero />
+
+  <section style="position:relative; width:100%; height:100vh; overflow:hidden">
+    <video autoplay muted loop playsinline style="width:100%; height:100%; object-fit:cover">
+      <source src="http://www.elefan.cl/wp-content/uploads/2023/12/video-elefan-1.mp4" type="video/mp4" />
+    </video>
+    <div style="position:absolute; inset:0; display:flex; flex-direction:column; justify-content:center; padding:0 80px">
+      <h2 style="font-size:clamp(1.5rem,3vw,2.5rem); font-weight:900; color:#2d4a6e; margin-bottom:16px">Servicios</h2>
+      <p style="font-size:1rem; color:#2d4a6e; max-width:420px; line-height:1.6; margin-bottom:32px">Hay una oportunidad única de cambiar la forma en que se comunican las empresas y marcas. Con un enfoque en formatos y productos innovadores, creamos mensajes que no solo se escuchan, sino que conectan de verdad y generan un impacto real.</p>
+      <a href="/servicios" style="display:inline-block; background:#2d4a6e; color:white; padding:12px 28px; font-size:0.85rem; font-weight:700; letter-spacing:2px; text-decoration:none; width:fit-content">CONOCE MÁS</a>
+    </div>
+  </section>
+
+  <ProjectGrid />
+
+  <section id="somos-section" style="position:relative; width:100%; min-height:100vh; overflow:hidden; display:flex; flex-direction:column; align-items:center; justify-content:flex-end; padding-bottom:80px">
+    <img id="somos-img" src="http://www.elefan.cl/wp-content/uploads/2019/07/somos.jpg" alt="Somos Elefan" style="position:absolute; inset:0; width:100%; height:110%; object-fit:cover; z-index:0; top:-5%" />
+    <div id="somos-text" style="position:relative; z-index:1; text-align:center; max-width:700px; padding:0 40px; opacity:0; transform:translateY(40px); transition: opacity 0.9s ease, transform 0.9s ease">
+      <h2 style="font-size:3rem; font-weight:900; color:#1a1a1a; margin-bottom:24px">Somos</h2>
+      <p style="font-size:1rem; color:#1a1a1a; line-height:1.8; font-weight:300">
+        Personas con iniciativa que le encantan las ideas que agreguen valor y generen proyectos que movilicen a las audiencias. Creemos que acciones vinculadas a la creatividad y a la comunicación lúdica conceptual permite conectarnos de forma más profunda con las personas, generando vínculo, entendimiento, aprendizaje efectivo y sobretodo, buenos recuerdos.
+      </p>
+    </div>
+  </section>
+
+  <section style="position:relative; width:100%; min-height:100vh; overflow:hidden; display:flex; flex-direction:column; align-items:center; justify-content:center; padding:80px 40px">
+    <img src="http://www.elefan.cl/wp-content/uploads/2024/02/3.-proyecto-del-mes-1024x1024.jpg" alt="" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; z-index:0" />
+    <div style="position:relative; z-index:1; text-align:center; width:100%; max-width:800px">
+      <h2 style="font-size:2.8rem; color:white; margin-bottom:48px">Proyecto <strong style="font-weight:900">del mes</strong></h2>
+      <div style="position:relative; width:100%; padding-bottom:56.25%">
+        <iframe
+          src="https://www.youtube.com/embed/sEC3W2QH4tc"
+          title="Proyecto del mes"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+          style="position:absolute; inset:0; width:100%; height:100%"
+        ></iframe>
+      </div>
+    </div>
+  </section>
+
+  <section style="padding:80px 60px; max-width:1200px; margin:0 auto">
+    <h2 style="font-size:2.5rem; font-weight:900; text-align:center; margin-bottom:8px">Blog</h2>
+    <p style="text-align:center; color:#888; font-weight:300; margin-bottom:48px">Ideas, reflexiones y tendencias del mundo creativo</p>
+    <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:32px">
+      <a href="/blog/el-equilibrio-en-la-productividad-una-vision-mas-humana-y-sostenible" style="text-decoration:none; color:inherit">
+        <img src="http://www.elefan.cl/wp-content/uploads/2023/12/Productividad-blog.png" alt="" style="width:100%; height:200px; object-fit:cover; display:block" />
+        <h3 style="font-size:0.95rem; font-weight:700; margin:16px 0 8px; color:#333">El Equilibrio en la Productividad: Una visión más humana y sostenible.</h3>
+        <p style="font-size:0.85rem; color:#888; font-weight:300">Desde nuestra experiencia entendemos que la productividad es esencial, pero también reconocemos su lado oscuro.</p>
+      </a>
+      <a href="/blog/la-escucha-adaptativa-la-clave-para-la-comunicacion-en-el-mundo-creativo" style="text-decoration:none; color:inherit">
+        <img src="http://www.elefan.cl/wp-content/uploads/2023/12/Escucha-blog.png" alt="" style="width:100%; height:200px; object-fit:cover; display:block" />
+        <h3 style="font-size:0.95rem; font-weight:700; margin:16px 0 8px; color:#333">La Escucha Adaptativa: La clave para la comunicación en el mundo creativo</h3>
+        <p style="font-size:0.85rem; color:#888; font-weight:300">En Agencia Elefan, reconocemos que la escucha es una habilidad crítica, especialmente en el ámbito creativo.</p>
+      </a>
+      <a href="/blog/microlearning-la-respuesta-creativa-para-el-aprendizaje-agil" style="text-decoration:none; color:inherit">
+        <img src="http://www.elefan.cl/wp-content/uploads/2023/12/Micro-elearning-blog.png" alt="" style="width:100%; height:200px; object-fit:cover; display:block" />
+        <h3 style="font-size:0.95rem; font-weight:700; margin:16px 0 8px; color:#333">Microlearning: La respuesta creativa para el aprendizaje ágil</h3>
+        <p style="font-size:0.85rem; color:#888; font-weight:300">¡El aprendizaje está cambiando! Hoy todo es más rápido e instantáneo. El microlearning es la respuesta.</p>
+      </a>
+    </div>
+    <div style="text-align:center; margin-top:48px">
+      <a href="/blog" style="display:inline-block; border:2px solid #1a1a1a; padding:12px 32px; font-size:0.85rem; font-weight:700; letter-spacing:2px; text-decoration:none; color:#1a1a1a; text-transform:uppercase">Ver todos</a>
+    </div>
+  </section>
+
+  <section style="background:#3a3d47; padding:80px 60px; text-align:center">
+    <h2 style="color:white; font-weight:900; font-size:2.5rem; margin-bottom:8px; text-transform:uppercase">Nuestros Clientes</h2>
+    <p style="color:white; font-weight:300; margin-bottom:60px; text-transform:uppercase; letter-spacing:2px">Han confiado en nosotros</p>
+    <div style="display:grid; grid-template-columns:repeat(4,1fr); gap:40px 60px; align-items:center; justify-items:center">
+      <img src="http://www.elefan.cl/wp-content/uploads/2025/08/logo-enaex.png" alt="Enaex" style="max-height:50px; max-width:140px; filter:grayscale(100%) brightness(0.7); object-fit:contain" />
+      <img src="http://www.elefan.cl/wp-content/uploads/2019/07/cencosud.png" alt="Cencosud" style="max-height:50px; max-width:140px; filter:grayscale(100%) brightness(0.7); object-fit:contain" />
+      <img src="http://www.elefan.cl/wp-content/uploads/2025/08/logo-softserve_V03.png" alt="SoftServe" style="max-height:50px; max-width:140px; filter:grayscale(100%) brightness(0.7); object-fit:contain" />
+      <img src="http://www.elefan.cl/wp-content/uploads/2019/07/LOGO-HUMIND.png" alt="Humind" style="max-height:50px; max-width:140px; filter:grayscale(100%) brightness(0.7); object-fit:contain" />
+      <img src="http://www.elefan.cl/wp-content/uploads/2025/08/LogoCOPEC-9_v03.png" alt="Copec" style="max-height:50px; max-width:140px; filter:grayscale(100%) brightness(0.7); object-fit:contain" />
+      <img src="http://www.elefan.cl/wp-content/uploads/2019/07/levis.png" alt="Levis" style="max-height:50px; max-width:140px; filter:grayscale(100%) brightness(0.7); object-fit:contain" />
+      <img src="http://www.elefan.cl/wp-content/uploads/2025/08/BAnco-Falabella-Logo.png" alt="Banco Falabella" style="max-height:50px; max-width:140px; filter:grayscale(100%) brightness(0.7); object-fit:contain" />
+      <img src="http://www.elefan.cl/wp-content/uploads/2019/07/cencosudscotiabank-1.png" alt="Cencosud Scotiabank" style="max-height:50px; max-width:140px; filter:grayscale(100%) brightness(0.7); object-fit:contain" />
+      <img src="http://www.elefan.cl/wp-content/uploads/2019/07/jumbo.png" alt="Jumbo" style="max-height:50px; max-width:140px; filter:grayscale(100%) brightness(0.7); object-fit:contain" />
+      <img src="http://www.elefan.cl/wp-content/uploads/2025/08/Inacap-Logo_v03.png" alt="INACAP" style="max-height:50px; max-width:140px; filter:grayscale(100%) brightness(0.7); object-fit:contain" />
+      <img src="http://www.elefan.cl/wp-content/uploads/2019/07/latam-2.png" alt="LATAM" style="max-height:50px; max-width:140px; filter:grayscale(100%) brightness(0.7); object-fit:contain" />
+      <img src="http://www.elefan.cl/wp-content/uploads/2019/07/Logo_ACHS.png" alt="ACHS" style="max-height:50px; max-width:140px; filter:grayscale(100%) brightness(0.7); object-fit:contain" />
+    </div>
+  </section>
+
+  <section style="background:#2d2d2d; padding:80px 60px">
+    <div style="max-width:1100px; margin:0 auto; display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:start">
+      <div>
+        <h2 style="font-size:2.8rem; font-weight:900; color:#f5c518; margin-bottom:16px">Contacto</h2>
+        <p style="color:#ccc; font-weight:300; line-height:1.7; margin-bottom:48px">Si tienes una inquietud, una problemática o una idea que echar adelante, comunícate con nosotros.</p>
+        <form action="https://formspree.io/f/hola@elefan.cl" method="POST" style="display:flex; flex-direction:column; gap:24px">
+          <div>
+            <label style="display:block; color:#aaa; font-size:0.75rem; letter-spacing:2px; text-transform:uppercase; margin-bottom:8px">Nombre</label>
+            <input name="nombre" type="text" required style="width:100%; background:transparent; border:none; border-bottom:1px solid #555; padding:10px 0; color:white; font-size:1rem; outline:none; font-family:inherit" />
+          </div>
+          <div>
+            <label style="display:block; color:#aaa; font-size:0.75rem; letter-spacing:2px; text-transform:uppercase; margin-bottom:8px">Email</label>
+            <input name="email" type="email" required style="width:100%; background:transparent; border:none; border-bottom:1px solid #555; padding:10px 0; color:white; font-size:1rem; outline:none; font-family:inherit" />
+          </div>
+          <div>
+            <label style="display:block; color:#aaa; font-size:0.75rem; letter-spacing:2px; text-transform:uppercase; margin-bottom:8px">Tipo de proyecto</label>
+            <select name="tipo" style="width:100%; background:#2d2d2d; border:none; border-bottom:1px solid #555; padding:10px 0; color:#aaa; font-size:1rem; outline:none; font-family:inherit; appearance:none">
+              <option value="">Selecciona una opción</option>
+              <option value="comunicacion-interna">Comunicación Interna</option>
+              <option value="capacitacion">Capacitación</option>
+              <option value="produccion-audiovisual">Producción Audiovisual</option>
+              <option value="comunicacion-masiva">Comunicación Masiva</option>
+              <option value="otro">Otro</option>
+            </select>
+          </div>
+          <div>
+            <label style="display:block; color:#aaa; font-size:0.75rem; letter-spacing:2px; text-transform:uppercase; margin-bottom:8px">Mensaje</label>
+            <textarea name="mensaje" rows="4" required style="width:100%; background:transparent; border:none; border-bottom:1px solid #555; padding:10px 0; color:white; font-size:1rem; outline:none; font-family:inherit; resize:none"></textarea>
+          </div>
+          <button type="submit" style="margin-top:8px; background:#f5c518; color:#1a1a1a; border:none; padding:16px 40px; font-size:0.85rem; font-weight:900; letter-spacing:3px; text-transform:uppercase; cursor:pointer; width:fit-content; font-family:inherit">Enviar mensaje</button>
+        </form>
+      </div>
+      <div style="padding-top:100px">
+        <div style="margin-bottom:48px">
+          <h3 style="color:white; font-weight:900; font-size:1.2rem; margin-bottom:20px">¿Ayuda?</h3>
+          <p style="color:#aaa; font-weight:300; margin-bottom:8px">Correo: <a href="mailto:hola@elefan.cl" style="color:#f5c518; text-decoration:none">hola@elefan.cl</a></p>
+          <p style="color:#aaa; font-weight:300">Teléfono: <a href="tel:+56996265972" style="color:#f5c518; text-decoration:none">+569 96265972</a> / <a href="tel:+56990990251" style="color:#f5c518; text-decoration:none">+569 90990251</a></p>
+        </div>
+        <div>
+          <h3 style="color:white; font-weight:900; font-size:1.2rem; margin-bottom:20px">Síguenos</h3>
+          <div style="display:flex; gap:16px">
+            <a href="https://instagram.com/elefanagencia" target="_blank" style="color:#f5c518; text-decoration:none; font-size:0.8rem; font-weight:700; letter-spacing:2px; text-transform:uppercase; border:1px solid #f5c518; padding:10px 20px">Instagram</a>
+            <a href="https://linkedin.com/company/elefan" target="_blank" style="color:#f5c518; text-decoration:none; font-size:0.8rem; font-weight:700; letter-spacing:2px; text-transform:uppercase; border:1px solid #f5c518; padding:10px 20px">LinkedIn</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer style="background:#1a1a1a; padding:40px 60px; display:flex; align-items:center; justify-content:space-between">
+    <img src="/images/logo-elefan.png" alt="Elefan" style="height:36px; filter:invert(1)" />
+    <nav style="display:flex; gap:32px">
+      <a href="/somos" style="color:#555; text-decoration:none; font-size:0.75rem; letter-spacing:2px; text-transform:uppercase; font-weight:300">Somos</a>
+      <a href="/servicios" style="color:#555; text-decoration:none; font-size:0.75rem; letter-spacing:2px; text-transform:uppercase; font-weight:300">Servicios</a>
+      <a href="/proyectos" style="color:#555; text-decoration:none; font-size:0.75rem; letter-spacing:2px; text-transform:uppercase; font-weight:300">Proyectos</a>
+      <a href="/blog" style="color:#555; text-decoration:none; font-size:0.75rem; letter-spacing:2px; text-transform:uppercase; font-weight:300">Blog</a>
+      <a href="#contacto" style="color:#555; text-decoration:none; font-size:0.75rem; letter-spacing:2px; text-transform:uppercase; font-weight:300">Contacto</a>
+    </nav>
+    <p style="color:#444; font-size:0.75rem; font-weight:300">© 2025 Agencia Elefan. Todos los derechos reservados.</p>
+  </footer>
+
+  <script>
+    const section = document.getElementById('somos-section');
+    const text = document.getElementById('somos-text');
+    const img = document.getElementById('somos-img');
+
+    window.addEventListener('scroll', () => {
+      if (!section || !text || !img) return;
+      const rect = section.getBoundingClientRect();
+      const windowH = window.innerHeight;
+
+      if (rect.top < windowH && rect.bottom > 0) {
+        const progress = (windowH - rect.top) / (windowH + rect.height);
+        img.style.transform = `translateY(${progress * 60 - 30}px)`;
+      }
+
+      if (rect.top < windowH * 0.75) {
+        text.style.opacity = '1';
+        text.style.transform = 'translateY(0)';
+      }
+    });
+  </script>
+
+</Layout>

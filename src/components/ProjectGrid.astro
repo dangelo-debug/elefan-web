@@ -1,0 +1,51 @@
+---
+import projectsRaw from '../data/projects.json';
+const projects = [...projectsRaw].reverse();
+const categories = ['Todos', 'Capacitación', 'Comunicación Interna', 'Comunicación Masiva', 'Producción'];
+---
+
+<section class="py-16 px-8">
+  <div class="text-center mb-12">
+    <h2 class="text-4xl font-black mb-2">Portafolio</h2>
+    <p class="text-amber-600 italic text-xl mb-4">— Hacemos lo que queremos —</p>
+    <p class="max-w-2xl mx-auto text-gray-500 text-base leading-relaxed line-clamp-4" style="font-weight: 300">
+      Difícil llamarle trabajo a lo que nos impulsa. Nos apasiona dar vida a ideas que transforman la comunicación y añaden valor real. Cada proyecto es una oportunidad para crear algo único, y esa pasión se refleja en cada detalle. Nos encanta la idea de construir mensajes que no solo se escuchen, sino que se sientan, porque sabemos que en cada proyecto hay una historia que merece ser contada de forma inolvidable.
+    </p>
+  </div>
+  <div class="flex justify-center gap-8 mb-10 border-b border-gray-200 pb-4">
+    {categories.map((cat) => (
+      <button class="filter-btn text-sm uppercase tracking-widest pb-2 hover:text-amber-600 transition-colors" data-filter={cat === 'Todos' ? 'all' : cat}>{cat}</button>
+    ))}
+  </div>
+  <div id="grid" class="columns-2 md:columns-3 lg:columns-4 gap-2">
+    {projects.map((project) => (
+      <a href={"/proyectos/" + project.slug} class="project-card block mb-2 overflow-hidden relative group" data-categories={project.categories.join(',')}>
+        <img src={project.image} alt={project.title} class="w-full object-cover transition-transform duration-500 group-hover:scale-105" />
+        <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
+          <p class="text-white text-sm font-bold">{project.title}</p>
+        </div>
+      </a>
+    ))}
+  </div>
+</section>
+
+<script>
+  const btns = document.querySelectorAll('.filter-btn');
+  const cards = document.querySelectorAll('.project-card');
+  btns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const filter = btn.getAttribute('data-filter');
+      btns.forEach(b => b.classList.remove('border-b-2', 'border-black', 'font-bold'));
+      btn.classList.add('border-b-2', 'border-black', 'font-bold');
+      cards.forEach(card => {
+        const cats = card.getAttribute('data-categories') || '';
+        if (filter === 'all' || cats.includes(filter)) {
+          (card as HTMLElement).style.display = 'block';
+        } else {
+          (card as HTMLElement).style.display = 'none';
+        }
+      });
+    });
+  });
+  (btns[0] as HTMLElement).classList.add('border-b-2', 'border-black', 'font-bold');
+</script>

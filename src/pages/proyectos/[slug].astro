@@ -1,0 +1,82 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Navbar from '../../components/Navbar.astro';
+import projects from '../../data/projects.json';
+import '../../styles/global.css';
+
+export function getStaticPaths() {
+  return projects.map((project) => ({
+    params: { slug: project.slug },
+    props: { project }
+  }));
+}
+
+const { project } = Astro.props;
+
+const isYoutube = project.video && project.video.includes('youtube');
+const isVimeo = project.video && project.video.includes('vimeo');
+
+let videoId = '';
+if (isYoutube) {
+  const match = project.video.match(/(?:watch\?v=|youtu\.be\/)([a-zA-Z0-9_-]+)/);
+  videoId = match ? match[1] : '';
+}
+if (isVimeo) {
+  const match = project.video.match(/vimeo\.com\/(\d+)/);
+  videoId = match ? match[1] : '';
+}
+---
+
+<Layout title={project.title + " — Elefan"}>
+  <Navbar />
+  <div style="padding-top:80px">
+
+    <section style="max-width:1000px; margin:0 auto; padding:80px 40px">
+      
+      <div style="margin-bottom:16px">
+        {project.categories.map((cat) => (
+          <span style="font-size:0.75rem; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:#f5c518; margin-right:16px">{cat}</span>
+        ))}
+      </div>
+
+      <h1 style="font-size:2.5rem; font-weight:900; color:#1a1a1a; line-height:1.2; margin-bottom:40px">{project.title}</h1>
+
+      {project.video && (
+        <div style="position:relative; width:100%; padding-bottom:56.25%; margin-bottom:48px">
+          {isYoutube && (
+            <iframe
+              src={"https://www.youtube.com/embed/" + videoId}
+              title={project.title}
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+              style="position:absolute; inset:0; width:100%; height:100%"
+            ></iframe>
+          )}
+          {isVimeo && (
+            <iframe
+              src={"https://player.vimeo.com/video/" + videoId}
+              title={project.title}
+              frameborder="0"
+              allow="autoplay; fullscreen; picture-in-picture"
+              allowfullscreen
+              style="position:absolute; inset:0; width:100%; height:100%"
+            ></iframe>
+          )}
+        </div>
+      )}
+
+      {!project.video && (
+        <img src={project.image} alt={project.title} style="width:100%; max-height:500px; object-fit:cover; margin-bottom:48px; display:block" />
+      )}
+
+      <p style="font-size:1.1rem; color:#444; line-height:1.9; font-weight:300; max-width:720px">{project.description}</p>
+
+      <div style="margin-top:64px; padding-top:32px; border-top:1px solid #eee">
+        <a href="/#portafolio" style="font-size:0.8rem; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:#1a1a1a; text-decoration:none">← Volver al portafolio</a>
+      </div>
+
+    </section>
+
+  </div>
+</Layout>

@@ -1,0 +1,72 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import '../styles/global.css';
+---
+
+<Layout title="Contacto — Elefan">
+  <Navbar />
+  <div style="padding-top:80px">
+    <section style="background:#2d2d2d; min-height:100vh; padding:80px 60px; display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:start; max-width:1200px; margin:0 auto">
+      
+      <div>
+        <h1 style="font-size:3rem; font-weight:900; color:#f5c518; margin-bottom:16px">Contacto</h1>
+        <p style="color:#ccc; font-weight:300; line-height:1.7; margin-bottom:48px; font-size:1.05rem">Si tienes una inquietud, una problemática o una idea que echar adelante, comunícate con nosotros.</p>
+        
+        <form action="https://formspree.io/f/hola@elefan.cl" method="POST" style="display:flex; flex-direction:column; gap:20px">
+          <div>
+            <label style="display:block; color:#aaa; font-size:0.8rem; letter-spacing:2px; text-transform:uppercase; margin-bottom:8px">Nombre</label>
+            <input name="nombre" type="text" required style="width:100%; background:transparent; border:none; border-bottom:1px solid #555; padding:10px 0; color:white; font-size:1rem; outline:none; font-family:inherit" />
+          </div>
+          <div>
+            <label style="display:block; color:#aaa; font-size:0.8rem; letter-spacing:2px; text-transform:uppercase; margin-bottom:8px">Email</label>
+            <input name="email" type="email" required style="width:100%; background:transparent; border:none; border-bottom:1px solid #555; padding:10px 0; color:white; font-size:1rem; outline:none; font-family:inherit" />
+          </div>
+          <div>
+            <label style="display:block; color:#aaa; font-size:0.8rem; letter-spacing:2px; text-transform:uppercase; margin-bottom:8px">Tipo de proyecto</label>
+            <select name="tipo" style="width:100%; background:transparent; border:none; border-bottom:1px solid #555; padding:10px 0; color:#aaa; font-size:1rem; outline:none; font-family:inherit; appearance:none">
+              <option value="" style="background:#2d2d2d">Selecciona una opción</option>
+              <option value="comunicacion-interna" style="background:#2d2d2d">Comunicación Interna</option>
+              <option value="capacitacion" style="background:#2d2d2d">Capacitación</option>
+              <option value="produccion-audiovisual" style="background:#2d2d2d">Producción Audiovisual</option>
+              <option value="comunicacion-masiva" style="background:#2d2d2d">Comunicación Masiva</option>
+              <option value="otro" style="background:#2d2d2d">Otro</option>
+            </select>
+          </div>
+          <div>
+            <label style="display:block; color:#aaa; font-size:0.8rem; letter-spacing:2px; text-transform:uppercase; margin-bottom:8px">Mensaje</label>
+            <textarea name="mensaje" rows="4" required style="width:100%; background:transparent; border:none; border-bottom:1px solid #555; padding:10px 0; color:white; font-size:1rem; outline:none; font-family:inherit; resize:none"></textarea>
+          </div>
+          <button type="submit" style="margin-top:16px; background:#f5c518; color:#1a1a1a; border:none; padding:16px 40px; font-size:0.85rem; font-weight:900; letter-spacing:3px; text-transform:uppercase; cursor:pointer; width:fit-content; font-family:inherit">Enviar mensaje</button>
+        </form>
+      </div>
+
+      <div style="padding-top:120px">
+        <div style="margin-bottom:48px">
+          <h3 style="color:white; font-weight:900; font-size:1.3rem; margin-bottom:24px">¿Ayuda?</h3>
+          <p style="color:#aaa; font-weight:300; margin-bottom:8px">Correo: <a href="mailto:hola@elefan.cl" style="color:#f5c518; text-decoration:none">hola@elefan.cl</a></p>
+          <p style="color:#aaa; font-weight:300">Teléfono: <a href="tel:+56996265972" style="color:#f5c518; text-decoration:none">+569 96265972</a> / <a href="tel:+56990990251" style="color:#f5c518; text-decoration:none">+569 90990251</a></p>
+        </div>
+        <div>
+          <h3 style="color:white; font-weight:900; font-size:1.3rem; margin-bottom:24px">Síguenos</h3>
+          <div style="display:flex; gap:16px">
+            <a href="https://instagram.com/elefanagencia" target="_blank" style="color:#f5c518; text-decoration:none; font-size:0.85rem; font-weight:700; letter-spacing:2px; text-transform:uppercase; border:1px solid #f5c518; padding:10px 20px">Instagram</a>
+            <a href="https://linkedin.com/company/elefan" target="_blank" style="color:#f5c518; text-decoration:none; font-size:0.85rem; font-weight:700; letter-spacing:2px; text-transform:uppercase; border:1px solid #f5c518; padding:10px 20px">LinkedIn</a>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <footer style="background:#1a1a1a; padding:40px 60px; display:flex; align-items:center; justify-content:space-between">
+      <img src="/images/logo-elefan.png" alt="Elefan" style="height:40px; filter:invert(1)" />
+      <nav style="display:flex; gap:32px">
+        <a href="/somos" style="color:#666; text-decoration:none; font-size:0.8rem; letter-spacing:2px; text-transform:uppercase; font-weight:300">Somos</a>
+        <a href="/servicios" style="color:#666; text-decoration:none; font-size:0.8rem; letter-spacing:2px; text-transform:uppercase; font-weight:300">Servicios</a>
+        <a href="/proyectos" style="color:#666; text-decoration:none; font-size:0.8rem; letter-spacing:2px; text-transform:uppercase; font-weight:300">Proyectos</a>
+        <a href="/blog" style="color:#666; text-decoration:none; font-size:0.8rem; letter-spacing:2px; text-transform:uppercase; font-weight:300">Blog</a>
+      </nav>
+      <p style="color:#444; font-size:0.8rem; font-weight:300">© 2025 Elefan. Todos los derechos reservados.</p>
+    </footer>
+  </div>
+</Layout>

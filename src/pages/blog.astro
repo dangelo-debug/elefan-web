@@ -1,0 +1,54 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import '../styles/global.css';
+
+const posts = [
+  {
+    title: "El Equilibrio en la Productividad: Una visión más humana y sostenible.",
+    slug: "el-equilibrio-en-la-productividad-una-vision-mas-humana-y-sostenible",
+    image: "http://www.elefan.cl/wp-content/uploads/2023/12/Productividad-blog.png",
+    excerpt: "Desde nuestra experiencia entendemos que la productividad es esencial, pero también reconocemos su lado oscuro."
+  },
+  {
+    title: "La Escucha Adaptativa: La clave para la comunicación en el mundo creativo",
+    slug: "la-escucha-adaptativa-la-clave-para-la-comunicacion-en-el-mundo-creativo",
+    image: "http://www.elefan.cl/wp-content/uploads/2023/12/Escucha-blog.png",
+    excerpt: "En Agencia Elefan, reconocemos que la escucha es una habilidad crítica, especialmente en el ámbito creativo."
+  },
+  {
+    title: "Microlearning: La respuesta creativa para el aprendizaje ágil",
+    slug: "microlearning-la-respuesta-creativa-para-el-aprendizaje-agil",
+    image: "http://www.elefan.cl/wp-content/uploads/2023/12/Micro-elearning-blog.png",
+    excerpt: "¡El aprendizaje está cambiando! Hoy todo es más rápido e instantáneo. El microlearning es la respuesta."
+  },
+  {
+    title: "La Curiosidad: nuestra herramienta más poderosa en el mundo creativo",
+    slug: "la-curiosidad-nuestra-herramienta-mas-poderosa-en-el-mundo-creativo",
+    image: "http://www.elefan.cl/wp-content/uploads/2023/12/Curiosidad-blog.png",
+    excerpt: "La curiosidad nos impulsa a explorar, a preguntar, a buscar nuevas formas de comunicar y conectar con las personas."
+  }
+];
+---
+
+<Layout title="Blog — Elefan">
+  <Navbar />
+  <div style="padding-top:80px">
+    <section style="padding:80px 60px; max-width:1200px; margin:0 auto">
+      <h1 style="font-size:3rem; font-weight:900; text-align:center; margin-bottom:60px">Blog</h1>
+      <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:40px">
+        {posts.map((post) => (
+          <a href={"/blog/" + post.slug} style="text-decoration:none; color:inherit; display:block">
+            <div style="border:1px solid #eee; overflow:hidden">
+              <img src={post.image} alt={post.title} style="width:100%; height:220px; object-fit:cover; display:block" />
+              <div style="padding:24px">
+                <h2 style="font-size:1rem; font-weight:700; color:#333; margin-bottom:12px; line-height:1.4">{post.title}</h2>
+                <p style="font-size:0.9rem; color:#666; line-height:1.6; font-weight:300">{post.excerpt}</p>
+              </div>
+            </div>
+          </a>
+        ))}
+      </div>
+    </section>
+  </div>
+</Layout>

@@ -1,0 +1,40 @@
+---
+const { title = "Elefan — Ideas audaces para empresas que inspiran", description = "Agencia Elefan. Comunicación corporativa, producción audiovisual y contenido educativo en Santiago, Chile." } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <title>{title}</title>
+    <style>
+     @font-face {
+  font-family: 'Avenir';
+  src: url('/fonts/26301410506.ttf') format('truetype');
+  font-weight: 300;
+}
+@font-face {
+  font-family: 'Avenir';
+  src: url('/fonts/25381880192.ttf') format('truetype');
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'Avenir';
+  src: url('/fonts/25381880192.ttf') format('truetype');
+  font-weight: 700;
+}
+@font-face {
+  font-family: 'Avenir';
+  src: url('/fonts/30716573843.ttf') format('truetype');
+  font-weight: 900;
+}
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      body { font-family: 'Avenir', sans-serif; }
+    </style>
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>
