@@ -202,24 +202,25 @@ import '../styles/global.css';
   flex-direction: column;
   justify-content: center;
   padding: 0 80px;
+  background: linear-gradient(to right, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.2) 70%, transparent 100%);
 }
 .servicios-video__title {
   font-size: clamp(1.5rem, 3vw, 2.5rem);
   font-weight: 900;
-  color: #2d4a6e;
+  color: white;
   margin-bottom: 16px;
 }
 .servicios-video__text {
   font-size: 1rem;
-  color: #2d4a6e;
+  color: rgba(255,255,255,0.9);
   max-width: 420px;
   line-height: 1.6;
   margin-bottom: 32px;
 }
 .btn-dark {
   display: inline-block;
-  background: #2d4a6e;
-  color: white;
+  background: white;
+  color: #1a1a1a;
   padding: 12px 28px;
   font-size: 0.85rem;
   font-weight: 700;
@@ -571,7 +572,12 @@ import '../styles/global.css';
   /* Servicios video */
   .servicios-video__content {
     padding: 0 24px;
-  }
+  }.servicios-video__content {
+  padding: 0 24px;
+  background: linear-gradient(to top, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.2) 100%);
+  justify-content: flex-end;
+  padding-bottom: 48px;
+}
 
   /* Somos */
   .somos-section {

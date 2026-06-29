@@ -75,6 +75,11 @@ const slides = [
   .nth3 { transition-delay:0.5s }
   .slide-active .sl { opacity:1; transform:translateY(0) }
 
+  /* Sombra de texto en todos los slides */
+  .slide-line {
+    text-shadow: 0 2px 12px rgba(0,0,0,0.55), 0 1px 3px rgba(0,0,0,0.4);
+  }
+
   .slider-btn {
     position: absolute;
     top: 50%;
@@ -88,6 +93,7 @@ const slides = [
     padding: 8px 16px;
     line-height: 1;
     transition: opacity 0.2s;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.5);
   }
   .slider-btn:hover { opacity: 1; }
   .slider-btn--prev { left: 16px; }
@@ -96,9 +102,14 @@ const slides = [
   @media (max-width: 768px) {
     .slide-text {
       padding: 0 24px !important;
+      /* Fondo semitransparente detrás del texto en móvil */
+      background: linear-gradient(to top, rgba(0,0,0,0.5) 0%, transparent 100%);
+      justify-content: flex-end !important;
+      padding-bottom: 60px !important;
     }
     .slide-line {
       font-size: var(--fs-mobile) !important;
+      text-shadow: 0 2px 16px rgba(0,0,0,0.8), 0 1px 4px rgba(0,0,0,0.6);
     }
     .slider-btn {
       font-size: 2rem;

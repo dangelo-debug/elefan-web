@@ -11,7 +11,7 @@ const categories = ['Todos', 'Capacitación', 'Comunicación Interna', 'Comunica
     <p class="max-w-2xl mx-auto text-gray-500 text-base leading-relaxed line-clamp-4" style="font-weight: 300">Difícil llamarle trabajo a lo que nos impulsa. Nos apasiona dar vida a ideas que transforman la comunicación y añaden valor real. Cada proyecto es una oportunidad para crear algo único, y esa pasión se refleja en cada detalle. Nos encanta la idea de construir mensajes que no solo se escuchen, sino que se sientan, porque sabemos que en cada proyecto hay una historia que merece ser contada de forma inolvidable.
     </p>
   </div>
-  <div class="flex justify-center gap-8 mb-10 border-b border-gray-200 pb-4">
+  <div class="filter-bar flex gap-8 mb-10 border-b border-gray-200 pb-4">
     {categories.map((cat) => (
       <button class="filter-btn text-sm uppercase tracking-widest pb-2 hover:text-amber-600 transition-colors" data-filter={cat === 'Todos' ? 'all' : cat}>{cat}</button>
     ))}
@@ -48,3 +48,26 @@ const categories = ['Todos', 'Capacitación', 'Comunicación Interna', 'Comunica
   });
   (btns[0] as HTMLElement).classList.add('border-b-2', 'border-black', 'font-bold');
 </script>
+<style>
+  .filter-bar {
+    justify-content: center;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  .filter-bar::-webkit-scrollbar {
+    display: none;
+  }
+  .filter-btn {
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  @media (max-width: 768px) {
+    .filter-bar {
+      justify-content: flex-start;
+      padding-left: 16px;
+      padding-right: 16px;
+    }
+  }
+</style>
