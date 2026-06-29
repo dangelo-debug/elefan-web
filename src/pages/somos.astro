@@ -8,14 +8,14 @@ import '../styles/global.css';
   <Navbar />
 
   <!-- Hero -->
-  <section style="position:relative; width:100%; height:100vh; overflow:hidden; display:flex; align-items:flex-end; padding-bottom:80px">
-    <img src="/images/305c230mm_2_1_.jpg" alt="" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:center; z-index:0" />
-    <div style="position:absolute; inset:0; background:linear-gradient(to bottom, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.7) 100%); z-index:1"></div>
-    <div style="position:relative; z-index:2; padding:0 80px; max-width:700px">
-      <p style="font-size:0.8rem; font-weight:700; letter-spacing:4px; text-transform:uppercase; color:#f5c518; margin-bottom:16px">Agencia Elefan</p>
-      <h1 style="font-size:clamp(3rem,6vw,5rem); font-weight:900; color:white; line-height:1.05; margin-bottom:24px">Donde hay una idea,<br/>hay un camino</h1>
-      <p style="font-size:1.1rem; color:rgba(255,255,255,0.85); font-weight:300; line-height:1.8; margin-bottom:40px">Somos una agencia de comunicaciones y creativa chilena fundada el 2017 en Santiago.</p>
-      <a href="#quienes-somos" style="display:inline-flex; align-items:center; gap:10px; color:white; text-decoration:none; font-size:0.85rem; font-weight:700; letter-spacing:2px; text-transform:uppercase; border:1px solid rgba(255,255,255,0.5); padding:14px 28px; transition:all 0.3s">
+  <section class="hero-somos">
+    <img src="/images/305c230mm_2_1_.jpg" alt="" class="hero-somos__bg" />
+    <div class="hero-somos__overlay"></div>
+    <div class="hero-somos__content">
+      <p class="label-gold">Agencia Elefan</p>
+      <h1 class="hero-somos__title">Donde hay una idea,<br/>hay un camino</h1>
+      <p class="hero-somos__sub">Somos una agencia de comunicaciones y creativa chilena fundada el 2017 en Santiago.</p>
+      <a href="#quienes-somos" class="btn-outline-white">
         Ver más
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:16px;height:16px"><line x1="12" y1="5" x2="12" y2="19"/><polyline points="19 12 12 19 5 12"/></svg>
       </a>
@@ -23,8 +23,8 @@ import '../styles/global.css';
   </section>
 
   <!-- Video + texto -->
-  <section id="quienes-somos" style="display:grid; grid-template-columns:1fr 1fr">
-    <div style="position:relative; width:100%; padding-bottom:0; height:600px">
+  <section id="quienes-somos" class="video-texto">
+    <div class="video-texto__media">
       <iframe
         src="https://www.youtube.com/embed/ZdzE65YVh5U"
         title="Agencia Elefan"
@@ -34,76 +34,358 @@ import '../styles/global.css';
         style="width:100%; height:100%; display:block"
       ></iframe>
     </div>
-    <div style="background:#1a1a1a; padding:80px 60px; display:flex; flex-direction:column; justify-content:center; height:600px">
-      <p style="font-size:0.75rem; font-weight:700; letter-spacing:4px; text-transform:uppercase; color:#f5c518; margin-bottom:24px">Quiénes somos</p>
-      <h2 style="font-size:2rem; font-weight:900; color:white; line-height:1.2; margin-bottom:32px">Una agencia boutique especializada en entregas de alto estándar</h2>
-      <p style="font-size:1rem; color:#ccc; font-weight:300; line-height:1.9; margin-bottom:24px">Con el correr de los años hemos encontrado nuestro camino que se materializa en lo que entregamos: innovación, creatividad y miradas distintas a hacer las cosas.</p>
-      <p style="font-size:1rem; color:#ccc; font-weight:300; line-height:1.9; margin-bottom:40px">Somos personas con iniciativa que le encantan las ideas que agreguen valor y generen proyectos que movilicen a las audiencias. Creemos en el poder de la comunicación lúdica conceptual para conectarnos de forma más profunda con las personas.</p>
-      <a href="/servicios" style="display:inline-block; background:#f5c518; color:#1a1a1a; padding:16px 40px; font-size:0.85rem; font-weight:900; letter-spacing:3px; text-transform:uppercase; text-decoration:none; width:fit-content">Nuestros servicios</a>
+    <div class="video-texto__copy">
+      <p class="label-gold">Quiénes somos</p>
+      <h2 class="video-texto__title">Una agencia boutique especializada en entregas de alto estándar</h2>
+      <p class="video-texto__body">Con el correr de los años hemos encontrado nuestro camino que se materializa en lo que entregamos: innovación, creatividad y miradas distintas a hacer las cosas.</p>
+      <p class="video-texto__body">Somos personas con iniciativa que le encantan las ideas que agreguen valor y generen proyectos que movilicen a las audiencias. Creemos en el poder de la comunicación lúdica conceptual para conectarnos de forma más profunda con las personas.</p>
+      <a href="/servicios" class="btn-yellow">Nuestros servicios</a>
     </div>
   </section>
 
   <!-- Propuesta de valor -->
-  <section style="padding:100px 80px; background:#f8f6f1">
-    <div style="max-width:1100px; margin:0 auto">
-      <p style="font-size:0.75rem; font-weight:700; letter-spacing:4px; text-transform:uppercase; color:#c8860a; margin-bottom:16px; text-align:center">Lo que nos define</p>
-      <h2 style="font-size:2.5rem; font-weight:900; text-align:center; margin-bottom:64px; color:#1a1a1a">Nuestra esencia</h2>
-      <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:40px">
-        <div style="padding:40px; background:white">
-          <svg viewBox="0 0 48 48" fill="none" stroke="#c8860a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="width:40px;height:40px;margin-bottom:20px">
-            <path d="M24 4c-8 0-14 6-14 14 0 6 3 10 8 13v5h12v-5c5-3 8-7 8-13 0-8-6-14-14-14z"/>
-            <line x1="18" y1="44" x2="30" y2="44"/>
-          </svg>
-          <h3 style="font-size:1.1rem; font-weight:900; color:#1a1a1a; margin-bottom:14px">Innovación</h3>
-          <p style="font-size:0.95rem; color:#666; font-weight:300; line-height:1.8">Estar en constante búsqueda de ideas que marquen la diferencia, adaptándonos a las tendencias emergentes y generando propuestas que conecten con las personas.</p>
-        </div>
-        <div style="padding:40px; background:white">
-          <svg viewBox="0 0 48 48" fill="none" stroke="#c8860a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="width:40px;height:40px;margin-bottom:20px">
-            <circle cx="24" cy="24" r="10"/>
-            <line x1="24" y1="4" x2="24" y2="10"/>
-            <line x1="24" y1="38" x2="24" y2="44"/>
-            <line x1="4" y1="24" x2="10" y2="24"/>
-            <line x1="38" y1="24" x2="44" y2="24"/>
-            <line x1="9" y1="9" x2="13" y2="13"/>
-            <line x1="35" y1="35" x2="39" y2="39"/>
-            <line x1="39" y1="9" x2="35" y2="13"/>
-            <line x1="13" y1="35" x2="9" y2="39"/>
-          </svg>
-          <h3 style="font-size:1.1rem; font-weight:900; color:#1a1a1a; margin-bottom:14px">Creatividad</h3>
-          <p style="font-size:0.95rem; color:#666; font-weight:300; line-height:1.8">A cada proyecto le damos una vuelta creativa, asegurándonos de que cada acción tenga un toque distintivo que deje una impresión memorable y ojalá buenos recuerdos.</p>
-        </div>
-        <div style="padding:40px; background:white">
-          <svg viewBox="0 0 48 48" fill="none" stroke="#c8860a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="width:40px;height:40px;margin-bottom:20px">
-            <circle cx="16" cy="20" r="7"/>
-            <circle cx="32" cy="20" r="7"/>
-            <path d="M4 42c0-8 5-13 12-13"/>
-            <path d="M32 29c7 0 12 5 12 13"/>
-            <line x1="22" y1="24" x2="26" y2="24"/>
-          </svg>
-          <h3 style="font-size:1.1rem; font-weight:900; color:#1a1a1a; margin-bottom:14px">Compromiso</h3>
-          <p style="font-size:0.95rem; color:#666; font-weight:300; line-height:1.8">Un equipo comprometido, entusiasta, que busca la excelencia y entiende esto como un servicio que necesita dedicación, resiliencia, entrega y cariño por lo que se hace.</p>
-        </div>
+  <section class="esencia">
+    <p class="label-orange" style="text-align:center">Lo que nos define</p>
+    <h2 class="section-title">Nuestra esencia</h2>
+    <div class="cards-3">
+      <div class="card-blanco">
+        <svg viewBox="0 0 48 48" fill="none" stroke="#c8860a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="width:40px;height:40px;margin-bottom:20px">
+          <path d="M24 4c-8 0-14 6-14 14 0 6 3 10 8 13v5h12v-5c5-3 8-7 8-13 0-8-6-14-14-14z"/>
+          <line x1="18" y1="44" x2="30" y2="44"/>
+        </svg>
+        <h3 class="card-title">Innovación</h3>
+        <p class="card-body">Estar en constante búsqueda de ideas que marquen la diferencia, adaptándonos a las tendencias emergentes y generando propuestas que conecten con las personas.</p>
+      </div>
+      <div class="card-blanco">
+        <svg viewBox="0 0 48 48" fill="none" stroke="#c8860a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="width:40px;height:40px;margin-bottom:20px">
+          <circle cx="24" cy="24" r="10"/>
+          <line x1="24" y1="4" x2="24" y2="10"/>
+          <line x1="24" y1="38" x2="24" y2="44"/>
+          <line x1="4" y1="24" x2="10" y2="24"/>
+          <line x1="38" y1="24" x2="44" y2="24"/>
+          <line x1="9" y1="9" x2="13" y2="13"/>
+          <line x1="35" y1="35" x2="39" y2="39"/>
+          <line x1="39" y1="9" x2="35" y2="13"/>
+          <line x1="13" y1="35" x2="9" y2="39"/>
+        </svg>
+        <h3 class="card-title">Creatividad</h3>
+        <p class="card-body">A cada proyecto le damos una vuelta creativa, asegurándonos de que cada acción tenga un toque distintivo que deje una impresión memorable y ojalá buenos recuerdos.</p>
+      </div>
+      <div class="card-blanco">
+        <svg viewBox="0 0 48 48" fill="none" stroke="#c8860a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="width:40px;height:40px;margin-bottom:20px">
+          <circle cx="16" cy="20" r="7"/>
+          <circle cx="32" cy="20" r="7"/>
+          <path d="M4 42c0-8 5-13 12-13"/>
+          <path d="M32 29c7 0 12 5 12 13"/>
+          <line x1="22" y1="24" x2="26" y2="24"/>
+        </svg>
+        <h3 class="card-title">Compromiso</h3>
+        <p class="card-body">Un equipo comprometido, entusiasta, que busca la excelencia y entiende esto como un servicio que necesita dedicación, resiliencia, entrega y cariño por lo que se hace.</p>
       </div>
     </div>
   </section>
 
   <!-- CTA -->
-  <section style="background:#1a1a1a; padding:80px; text-align:center">
-    <h2 style="font-size:2.5rem; font-weight:900; color:white; margin-bottom:24px">¿Tienes una idea?</h2>
-    <p style="font-size:1.1rem; color:#aaa; font-weight:300; margin-bottom:40px">Donde hay una idea, hay un camino. Conversemos.</p>
-    <a href="/#contacto" style="display:inline-block; background:#f5c518; color:#1a1a1a; padding:18px 48px; font-size:0.85rem; font-weight:900; letter-spacing:3px; text-transform:uppercase; text-decoration:none">Contactar</a>
+  <section class="cta-dark">
+    <h2 class="cta-dark__title">¿Tienes una idea?</h2>
+    <p class="cta-dark__sub">Donde hay una idea, hay un camino. Conversemos.</p>
+    <a href="/#contacto" class="btn-yellow">Contactar</a>
   </section>
 
   <!-- Footer -->
-  <footer style="background:#111; padding:40px 80px; display:flex; align-items:center; justify-content:space-between">
-    <img src="/images/logo-elefan.png" alt="Elefan" style="height:36px; filter:invert(1)" />
-    <nav style="display:flex; gap:32px">
-      <a href="/" style="color:#555; text-decoration:none; font-size:0.75rem; letter-spacing:2px; text-transform:uppercase; font-weight:300">Home</a>
-      <a href="/servicios" style="color:#555; text-decoration:none; font-size:0.75rem; letter-spacing:2px; text-transform:uppercase; font-weight:300">Servicios</a>
-      <a href="/proyectos" style="color:#555; text-decoration:none; font-size:0.75rem; letter-spacing:2px; text-transform:uppercase; font-weight:300">Proyectos</a>
-      <a href="/blog" style="color:#555; text-decoration:none; font-size:0.75rem; letter-spacing:2px; text-transform:uppercase; font-weight:300">Blog</a>
+  <footer class="footer-page">
+    <img src="/images/logo-elefan.png" alt="Elefan" class="footer-page__logo" />
+    <nav class="footer-page__nav">
+      <a href="/" class="footer-page__link">Home</a>
+      <a href="/servicios" class="footer-page__link">Servicios</a>
+      <a href="/proyectos" class="footer-page__link">Proyectos</a>
+      <a href="/blog" class="footer-page__link">Blog</a>
     </nav>
-    <p style="color:#444; font-size:0.75rem; font-weight:300">© 2025 Agencia Elefan</p>
+    <p class="footer-page__copy">© 2025 Agencia Elefan</p>
   </footer>
 
 </Layout>
+
+<style>
+/* ---- HERO ---- */
+.hero-somos {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 80px;
+}
+.hero-somos__bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: 0;
+}
+.hero-somos__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.7) 100%);
+  z-index: 1;
+}
+.hero-somos__content {
+  position: relative;
+  z-index: 2;
+  padding: 0 80px;
+  max-width: 700px;
+}
+.hero-somos__title {
+  font-size: clamp(2rem, 6vw, 5rem);
+  font-weight: 900;
+  color: white;
+  line-height: 1.05;
+  margin-bottom: 24px;
+}
+.hero-somos__sub {
+  font-size: 1.05rem;
+  color: rgba(255,255,255,0.85);
+  font-weight: 300;
+  line-height: 1.8;
+  margin-bottom: 40px;
+}
+.btn-outline-white {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: white;
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  border: 1px solid rgba(255,255,255,0.5);
+  padding: 14px 28px;
+}
+
+/* ---- VIDEO + TEXTO ---- */
+.video-texto {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.video-texto__media {
+  height: 600px;
+}
+.video-texto__copy {
+  background: #1a1a1a;
+  padding: 80px 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 600px;
+  overflow-y: auto;
+}
+.video-texto__title {
+  font-size: 2rem;
+  font-weight: 900;
+  color: white;
+  line-height: 1.2;
+  margin-bottom: 32px;
+}
+.video-texto__body {
+  font-size: 1rem;
+  color: #ccc;
+  font-weight: 300;
+  line-height: 1.9;
+  margin-bottom: 24px;
+}
+
+/* ---- ESENCIA ---- */
+.esencia {
+  padding: 100px 80px;
+  background: #f8f6f1;
+}
+.cards-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.card-blanco {
+  padding: 40px;
+  background: white;
+}
+.card-title {
+  font-size: 1.1rem;
+  font-weight: 900;
+  color: #1a1a1a;
+  margin-bottom: 14px;
+}
+.card-body {
+  font-size: 0.95rem;
+  color: #666;
+  font-weight: 300;
+  line-height: 1.8;
+}
+
+/* ---- CTA DARK ---- */
+.cta-dark {
+  background: #1a1a1a;
+  padding: 80px 40px;
+  text-align: center;
+}
+.cta-dark__title {
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: white;
+  margin-bottom: 24px;
+}
+.cta-dark__sub {
+  font-size: 1.1rem;
+  color: #aaa;
+  font-weight: 300;
+  margin-bottom: 40px;
+}
+
+/* ---- SHARED ATOMS ---- */
+.label-gold {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: #f5c518;
+  margin-bottom: 24px;
+}
+.label-orange {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: #c8860a;
+  margin-bottom: 16px;
+}
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 900;
+  text-align: center;
+  margin-bottom: 64px;
+  color: #1a1a1a;
+}
+.btn-yellow {
+  display: inline-block;
+  background: #f5c518;
+  color: #1a1a1a;
+  padding: 16px 40px;
+  font-size: 0.85rem;
+  font-weight: 900;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  text-decoration: none;
+  width: fit-content;
+  margin-top: 8px;
+}
+
+/* ---- FOOTER ---- */
+.footer-page {
+  background: #111;
+  padding: 40px 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+.footer-page__logo {
+  height: 36px;
+  filter: invert(1);
+}
+.footer-page__nav {
+  display: flex;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+.footer-page__link {
+  color: #555;
+  text-decoration: none;
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: 300;
+}
+.footer-page__copy {
+  color: #444;
+  font-size: 0.75rem;
+  font-weight: 300;
+}
+
+/* ============================================
+   RESPONSIVO TABLET (≤1024px)
+   ============================================ */
+@media (max-width: 1024px) {
+  .cards-3 {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* ============================================
+   RESPONSIVO MÓVIL (≤768px)
+   ============================================ */
+@media (max-width: 768px) {
+  /* Hero */
+  .hero-somos {
+    padding-bottom: 48px;
+    align-items: flex-end;
+  }
+  .hero-somos__content {
+    padding: 0 24px;
+  }
+
+  /* Video + texto: apilado */
+  .video-texto {
+    grid-template-columns: 1fr;
+  }
+  .video-texto__media {
+    height: 240px;
+  }
+  .video-texto__copy {
+    height: auto;
+    padding: 48px 24px;
+  }
+  .video-texto__title {
+    font-size: 1.6rem;
+  }
+
+  /* Esencia */
+  .esencia {
+    padding: 60px 24px;
+  }
+  .section-title {
+    font-size: 1.8rem;
+    margin-bottom: 40px;
+  }
+  .cards-3 {
+    grid-template-columns: 1fr;
+  }
+  .card-blanco {
+    padding: 28px;
+  }
+
+  /* CTA */
+  .cta-dark {
+    padding: 60px 24px;
+  }
+  .cta-dark__title {
+    font-size: 1.8rem;
+  }
+
+  /* Footer */
+  .footer-page {
+    padding: 40px 24px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+  }
+  .footer-page__nav {
+    gap: 16px;
+  }
+}
+</style>

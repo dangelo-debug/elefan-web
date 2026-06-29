@@ -1,14 +1,128 @@
 ---
 ---
-<nav class="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-8 py-4 bg-white">
+<nav class="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-8 py-4 bg-white" id="navbar">
   <a href="/">
     <img src="/images/logo-elefan.png" alt="Elefan" class="h-12" />
   </a>
-  <ul class="flex gap-8 list-none">
+
+  <!-- Menú desktop -->
+  <ul class="nav-links flex gap-8 list-none">
     <li><a href="/somos" class="text-sm tracking-widest uppercase hover:opacity-60 transition-opacity">Somos</a></li>
     <li><a href="/servicios" class="text-sm tracking-widest uppercase hover:opacity-60 transition-opacity">Servicios</a></li>
     <li><a href="/#portafolio" class="text-sm tracking-widest uppercase hover:opacity-60 transition-opacity">Proyectos</a></li>
     <li><a href="/blog" class="text-sm tracking-widest uppercase hover:opacity-60 transition-opacity">Blog</a></li>
     <li><a href="/contacto" class="text-sm tracking-widest uppercase hover:opacity-60 transition-opacity">Contacto</a></li>
   </ul>
+
+  <!-- Botón hamburguesa -->
+  <button id="menu-toggle" aria-label="Abrir menú" aria-expanded="false">
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
+  </button>
 </nav>
+
+<!-- Menú móvil overlay -->
+<div id="mobile-menu">
+  <ul>
+    <li><a href="/somos">Somos</a></li>
+    <li><a href="/servicios">Servicios</a></li>
+    <li><a href="/#portafolio">Proyectos</a></li>
+    <li><a href="/blog">Blog</a></li>
+    <li><a href="/contacto">Contacto</a></li>
+  </ul>
+</div>
+
+<style>
+  /* Hamburguesa — oculta en desktop */
+  #menu-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+    z-index: 60;
+  }
+  .bar {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: #1a1a1a;
+    border-radius: 2px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+
+  /* Estado activo del botón (X) */
+  #menu-toggle.active .bar:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+  #menu-toggle.active .bar:nth-child(2) { opacity: 0; }
+  #menu-toggle.active .bar:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+  /* Menú móvil overlay */
+  #mobile-menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: white;
+    z-index: 40;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  #mobile-menu.open {
+    display: flex;
+  }
+  #mobile-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+  }
+  #mobile-menu ul li {
+    margin-bottom: 2rem;
+  }
+  #mobile-menu ul li a {
+    font-size: 1.5rem;
+    font-weight: 900;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #1a1a1a;
+    text-decoration: none;
+    transition: color 0.2s ease;
+  }
+  #mobile-menu ul li a:hover {
+    color: #f5c518;
+  }
+
+  @media (max-width: 768px) {
+    .nav-links { display: none; }
+    #menu-toggle { display: flex; }
+  }
+</style>
+
+<script>
+  const toggle = document.getElementById('menu-toggle');
+  const menu = document.getElementById('mobile-menu');
+  const links = menu?.querySelectorAll('a');
+
+  toggle?.addEventListener('click', () => {
+    const isOpen = menu?.classList.toggle('open');
+    toggle.classList.toggle('active');
+    toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    document.body.style.overflow = isOpen ? 'hidden' : '';
+  });
+
+  // Cerrar al hacer click en un link
+  links?.forEach(link => {
+    link.addEventListener('click', () => {
+      menu?.classList.remove('open');
+      toggle?.classList.remove('active');
+      toggle?.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
+    });
+  });
+</script>
