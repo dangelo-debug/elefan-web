@@ -18,21 +18,29 @@ const isVimeo = project.video && project.video.includes('vimeo');
 
 let videoId = '';
 if (isYoutube) {
-  const match = project.video.match(/(?:watch\?v=|youtu\.be\/)([a-zA-Z0-9_-]+)/);
+  const match = project.video.match(/(?:watch\?v=|youtu\.be\/|shorts\/)([a-zA-Z0-9_-]+)/);
   videoId = match ? match[1] : '';
 }
 if (isVimeo) {
   const match = project.video.match(/vimeo\.com\/(\d+)/);
   videoId = match ? match[1] : '';
 }
+
+const cleanDescription = project.description
+  .replace(/[A-Za-z0-9+/]{15,}={0,2}/g, '')
+  .replace(/PGJy[A-Za-z0-9+/=]*/g, '')
+  .replace(/\s{2,}/g, ' ')
+  .replace(/\n{3,}/g, '\n\n')
+  .trim();
+
+const extraVideos = project.extraVideos || [];
 ---
 
 <Layout title={project.title + " — Elefan"}>
   <Navbar />
   <div style="padding-top:80px">
-
     <section style="max-width:1000px; margin:0 auto; padding:80px 40px">
-      
+
       <div style="margin-bottom:16px">
         {project.categories.map((cat) => (
           <span style="font-size:0.75rem; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:#f5c518; margin-right:16px">{cat}</span>
@@ -42,41 +50,103 @@ if (isVimeo) {
       <h1 style="font-size:2.5rem; font-weight:900; color:#1a1a1a; line-height:1.2; margin-bottom:40px">{project.title}</h1>
 
       {project.video && (
-        <div style="position:relative; width:100%; padding-bottom:56.25%; margin-bottom:48px">
+        <div style="position:relative; width:100%; padding-bottom:56.25%; margin-bottom:32px">
           {isYoutube && (
-            <iframe
-              src={"https://www.youtube.com/embed/" + videoId}
-              title={project.title}
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
-              style="position:absolute; inset:0; width:100%; height:100%"
-            ></iframe>
+            <iframe src={"https://www.youtube.com/embed/" + videoId} title={project.title} frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="position:absolute; inset:0; width:100%; height:100%"></iframe>
           )}
           {isVimeo && (
-            <iframe
-              src={"https://player.vimeo.com/video/" + videoId}
-              title={project.title}
-              frameborder="0"
-              allow="autoplay; fullscreen; picture-in-picture"
-              allowfullscreen
-              style="position:absolute; inset:0; width:100%; height:100%"
-            ></iframe>
+            <iframe src={"https://player.vimeo.com/video/" + videoId} title={project.title} frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="position:absolute; inset:0; width:100%; height:100%"></iframe>
           )}
         </div>
       )}
 
-      {!project.video && (
-        <img src={project.image} alt={project.title} style="width:100%; max-height:500px; object-fit:cover; margin-bottom:48px; display:block" />
+      {extraVideos.map((vid) => {
+        const isYT = vid.includes('youtube');
+        const isVM = vid.includes('vimeo');
+        let vId = '';
+        if (isYT) { const m = vid.match(/(?:watch\?v=|youtu\.be\/)([a-zA-Z0-9_-]+)/); vId = m ? m[1] : ''; }
+        if (isVM) { const m = vid.match(/vimeo\.com\/(\d+)/); vId = m ? m[1] : ''; }
+        return (
+          <div style="position:relative; width:100%; padding-bottom:56.25%; margin-bottom:32px">
+            {isYT && <iframe src={"https://www.youtube.com/embed/" + vId} frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="position:absolute; inset:0; width:100%; height:100%"></iframe>}
+            {isVM && <iframe src={"https://player.vimeo.com/video/" + vId} frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="position:absolute; inset:0; width:100%; height:100%"></iframe>}
+          </div>
+        );
+      })}
+
+      {!project.video && project.heroImage && (
+  <img src={project.heroImage} alt={project.title} style="width:100%; max-height:500px; object-fit:cover; margin-bottom:48px; display:block" />
       )}
 
-      <p style="font-size:1.1rem; color:#444; line-height:1.9; font-weight:300; max-width:720px">{project.description}</p>
+      <p style="font-size:1.1rem; color:#444; line-height:1.9; font-weight:300; max-width:720px; margin-bottom:64px; white-space:pre-line">{cleanDescription}</p>
 
-      <div style="margin-top:64px; padding-top:32px; border-top:1px solid #eee">
-        <a href="/#portafolio" style="font-size:0.8rem; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:#1a1a1a; text-decoration:none">← Volver al portafolio</a>
+      {project.gallery && project.gallery.length > 0 && (
+        <div style="margin-bottom:64px">
+          <h2 style="font-size:1rem; font-weight:900; color:#1a1a1a; margin-bottom:24px; letter-spacing:3px; text-transform:uppercase">Galería</h2>
+          <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:8px">
+            {project.gallery.map((img, i) => (
+              <button onclick={"openLightbox(" + i + ")"} style="display:block; overflow:hidden; border:none; padding:0; cursor:pointer; background:none">
+                <img src={img} alt="" style="width:100%; height:220px; object-fit:cover; display:block; transition:transform 0.4s ease" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'" />
+              </button>
+            ))}
+          </div>
+        </div>
+      )}
+
+      <div style="padding-top:32px; border-top:1px solid #eee">
+        <a href="/proyectos" style="font-size:0.8rem; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:#1a1a1a; text-decoration:none">← Volver al portafolio</a>
       </div>
 
     </section>
-
   </div>
+
+  <!-- Lightbox -->
+  <div id="lightbox" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.95); z-index:1000; align-items:center; justify-content:center; flex-direction:column">
+    <button onclick="closeLightbox()" style="position:absolute; top:20px; right:30px; color:white; font-size:2.5rem; background:none; border:none; cursor:pointer; line-height:1">×</button>
+    <button onclick="prevImage()" style="position:absolute; left:20px; top:50%; transform:translateY(-50%); color:white; font-size:3rem; background:none; border:none; cursor:pointer; opacity:0.7">&#8249;</button>
+    <img id="lightbox-img" src="" alt="" style="max-width:90vw; max-height:85vh; object-fit:contain" />
+    <p id="lightbox-counter" style="color:#aaa; margin-top:16px; font-size:0.85rem; letter-spacing:2px"></p>
+    <button onclick="nextImage()" style="position:absolute; right:20px; top:50%; transform:translateY(-50%); color:white; font-size:3rem; background:none; border:none; cursor:pointer; opacity:0.7">&#8250;</button>
+  </div>
+
+  <script define:vars={{ gallery: project.gallery || [] }}>
+    let current = 0;
+    const lb = document.getElementById('lightbox');
+    const lbImg = document.getElementById('lightbox-img');
+    const lbCounter = document.getElementById('lightbox-counter');
+
+    function openLightbox(i) {
+      current = i;
+      lb.style.display = 'flex';
+      lbImg.src = gallery[current];
+      lbCounter.textContent = (current + 1) + ' / ' + gallery.length;
+      document.body.style.overflow = 'hidden';
+    }
+    function closeLightbox() {
+      lb.style.display = 'none';
+      document.body.style.overflow = '';
+    }
+    function nextImage() {
+      current = (current + 1) % gallery.length;
+      lbImg.src = gallery[current];
+      lbCounter.textContent = (current + 1) + ' / ' + gallery.length;
+    }
+    function prevImage() {
+      current = (current - 1 + gallery.length) % gallery.length;
+      lbImg.src = gallery[current];
+      lbCounter.textContent = (current + 1) + ' / ' + gallery.length;
+    }
+    document.addEventListener('keydown', (e) => {
+      if (lb.style.display === 'flex') {
+        if (e.key === 'ArrowRight') nextImage();
+        if (e.key === 'ArrowLeft') prevImage();
+        if (e.key === 'Escape') closeLightbox();
+      }
+    });
+    window.openLightbox = openLightbox;
+    window.closeLightbox = closeLightbox;
+    window.nextImage = nextImage;
+    window.prevImage = prevImage;
+  </script>
+
 </Layout>

@@ -1,0 +1,303 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import '../styles/global.css';
+
+const servicios = [
+  {
+    num: "01",
+    titulo: "Comunicaciones Internas",
+    texto: "Creamos y desarrollamos comunicaciones internas para apoyar sus estrategias corporativas, procesos e hitos. Generamos estrategias, soluciones creativas, conceptos, ideas y métodos con los que las empresas pueden fomentar y construir una cultura sólida, cercana y que logre una mayor conexión y compromiso con sus equipos."
+  },
+  {
+    num: "02",
+    titulo: "Capacitación",
+    texto: "Creamos capacitaciones innovadoras y lúdicas que transformarán la forma en que los colaboradores aprenden y se desarrollan. Nuestro enfoque creativo y dinámico genera un ambiente de aprendizaje único, donde las personas se entretienen mientras adquieren nuevos conocimientos y habilidades."
+  },
+  {
+    num: "03",
+    titulo: "Construcción de Cultura, Propósito e Identidad",
+    texto: "El desarrollo organizacional requiere de comunicaciones construidas especialmente para cada empresa. Acompañamos estratégicamente la implementación de prácticas y procesos que fortalezcan la gestión del cambio, la gestión del talento y otros aspectos clave para el crecimiento de la empresa."
+  },
+  {
+    num: "04",
+    titulo: "Comunicación Planes de Incentivo",
+    texto: "Creamos campañas para darle fuerza a los planes de incentivo, usando un enfoque estratégico, lúdico, cercano y con impronta, para transmitir de manera efectiva los beneficios para el colaborador. Estrategias creativas, canales y formatos innovadores y mensajes impactantes que motiven a las audiencias."
+  },
+  {
+    num: "05",
+    titulo: "Creación de Contenidos y Experiencia",
+    texto: "Somos fuente y creación de contenidos únicos para las empresas. Creados y diseñados a la medida en diversos formatos: narrativas, historias, relatos, épicas, proyectos culturales, entre muchos otros dependiendo de la necesidad y contexto."
+  },
+  {
+    num: "06",
+    titulo: "Employee Experience",
+    texto: "Creamos experiencias significativas que colocan a los empleados en el centro de la cultura organizacional. Diseñamos iniciativas que mejoren el bienestar, el compromiso y la satisfacción en el lugar de trabajo, ayudando a construir una cultura donde cada colaborador se sienta valorado y motivado."
+  },
+  {
+    num: "07",
+    titulo: "Employee Advocacy",
+    texto: "Ayudamos a convertir a tu equipo en embajadores de la marca, promoviendo su participación activa en la promoción de la empresa y sus valores. Fortalecemos el sentido de pertenencia, empoderamos a los colaboradores para que compartan su experiencia y creamos una cultura de colaboración y participación."
+  },
+  {
+    num: "08",
+    titulo: "Producciones",
+    texto: "Desde la producción, podemos hacer y pensar casi todo. Nuestra experiencia nos permite diseñar e implementar eventos, activaciones en oficinas, intervenciones lúdicas, creación de artefactos, producir eventos, realizar un cautivante video corporativo, y tantas cosas más. Somos versátiles y puedes desafiarnos con lo que sea."
+  }
+];
+---
+
+<Layout title="Servicios — Elefan">
+  <Navbar />
+
+  <!-- Hero -->
+  <section style="position:relative; width:100%; height:100vh; overflow:hidden; display:flex; align-items:center">
+    <img src="/images/305x230mm_1_.jpg" alt="" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:center; z-index:0" />
+    <div style="position:absolute; inset:0; background:rgba(248,245,238,0.55); z-index:1"></div>
+    <div style="position:relative; z-index:2; padding:0 80px; max-width:560px">
+      <p style="font-size:0.8rem; font-weight:700; letter-spacing:4px; text-transform:uppercase; color:#c8860a; margin-bottom:16px">Lo que nos apasiona hacer</p>
+      <h1 style="font-size:clamp(3rem,6vw,5rem); font-weight:900; color:#1a1a1a; line-height:1.05; margin-bottom:24px; font-family:Avenir,sans-serif">Servicios</h1>
+      <p style="font-size:1.05rem; color:#333; font-weight:300; line-height:1.8; max-width:440px">Hay una oportunidad única de cambiar la forma en que se comunican las empresas y marcas. Con formatos innovadores, creamos mensajes que no solo se escuchan, sino que conectan de verdad y generan impacto real.</p>
+    </div>
+  </section>
+
+  <!-- Quiénes somos -->
+  <section style="position:relative; padding:100px 80px; display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:center; overflow:hidden">
+    <img src="http://www.elefan.cl/wp-content/uploads/2023/11/BG.jpg" alt="" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; z-index:0" />
+    <div style="position:absolute; inset:0; background:rgba(0,0,0,0.78); z-index:1"></div>
+    <div style="position:relative; z-index:2">
+      <p style="font-size:0.75rem; font-weight:700; letter-spacing:4px; text-transform:uppercase; color:#f5c518; margin-bottom:24px">Agencia Elefan</p>
+      <h2 style="font-size:2.2rem; font-weight:900; color:white; line-height:1.2; margin-bottom:32px; font-family:Avenir,sans-serif">Somos una agencia boutique especializada en entregas de alto estándar</h2>
+    </div>
+    <div style="position:relative; z-index:2">
+      <p style="font-size:1rem; color:#ccc; font-weight:300; line-height:1.9; margin-bottom:24px">Somos una agencia de comunicaciones y creativa chilena fundada el 2017 en Santiago. Con el correr de los años hemos encontrado nuestro camino que se materializa en lo que entregamos: innovación, creatividad y miradas distintas a hacer las cosas.</p>
+      <p style="font-size:1rem; color:#ccc; font-weight:300; line-height:1.9">Somos personas con iniciativa que le encantan las ideas que agreguen valor y generen proyectos que movilicen a las audiencias. Creemos que acciones vinculadas a la creatividad y a la comunicación lúdica conceptual permite conectarnos de forma más profunda con las personas, generando vínculo, entendimiento, aprendizaje efectivo y sobretodo, buenos recuerdos.</p>
+    </div>
+  </section>
+
+  <!-- Servicios -->
+  <section style="padding:100px 80px; max-width:1100px; margin:0 auto">
+    <p style="font-size:0.75rem; font-weight:700; letter-spacing:4px; text-transform:uppercase; color:#c8860a; margin-bottom:16px; text-align:center">Nuestros servicios</p>
+    <h2 style="font-size:2.5rem; font-weight:900; text-align:center; margin-bottom:80px; color:#1a1a1a; font-family:Avenir,sans-serif">Lo que hacemos</h2>
+
+    <!-- 01 -->
+    <div style="display:grid; grid-template-columns:80px 1fr; gap:40px; align-items:start; padding:48px 0; border-top:1px solid #e8e8e8">
+      <div style="display:flex; flex-direction:column; align-items:center; gap:10px">
+        <svg viewBox="0 0 56 56" fill="none" stroke="#1a1a1a" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" style="width:52px;height:52px">
+          <path d="M8 20h8l18-10v36L16 36H8a3 3 0 01-3-3V23a3 3 0 013-3z"/>
+          <path d="M16 20v16"/>
+          <path d="M42 18c5 3 7 7 7 10s-2 7-7 10" stroke="#c8860a" stroke-width="1.8"/>
+          <path d="M38 22c3 2 4 5 4 6s-1 4-4 6" stroke="#c8860a"/>
+        </svg>
+        <span style="font-size:0.65rem; font-weight:700; letter-spacing:2px; color:#c8860a">01</span>
+      </div>
+      <div>
+        <h3 style="font-size:1.4rem; font-weight:900; color:#1a1a1a; margin-bottom:14px; font-family:Avenir,sans-serif">Comunicaciones Internas</h3>
+        <p style="font-size:1rem; color:#555; font-weight:300; line-height:1.85">{servicios[0].texto}</p>
+      </div>
+    </div>
+
+    <!-- 02 -->
+    <div style="display:grid; grid-template-columns:80px 1fr; gap:40px; align-items:start; padding:48px 0; border-top:1px solid #e8e8e8">
+      <div style="display:flex; flex-direction:column; align-items:center; gap:10px">
+        <svg viewBox="0 0 56 56" fill="none" stroke="#1a1a1a" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" style="width:52px;height:52px">
+          <rect x="4" y="8" width="48" height="32" rx="3"/>
+          <line x1="4" y1="18" x2="52" y2="18"/>
+          <line x1="14" y1="26" x2="28" y2="26"/>
+          <line x1="14" y1="32" x2="22" y2="32"/>
+          <path d="M34 26l4 6 4-6" stroke="#c8860a"/>
+          <line x1="28" y1="40" x2="28" y2="50"/>
+          <line x1="18" y1="50" x2="38" y2="50"/>
+        </svg>
+        <span style="font-size:0.65rem; font-weight:700; letter-spacing:2px; color:#c8860a">02</span>
+      </div>
+      <div>
+        <h3 style="font-size:1.4rem; font-weight:900; color:#1a1a1a; margin-bottom:14px; font-family:Avenir,sans-serif">Capacitación</h3>
+        <p style="font-size:1rem; color:#555; font-weight:300; line-height:1.85">{servicios[1].texto}</p>
+      </div>
+    </div>
+
+    <!-- 03 -->
+    <div style="display:grid; grid-template-columns:80px 1fr; gap:40px; align-items:start; padding:48px 0; border-top:1px solid #e8e8e8">
+      <div style="display:flex; flex-direction:column; align-items:center; gap:10px">
+        <svg viewBox="0 0 56 56" fill="none" stroke="#1a1a1a" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" style="width:52px;height:52px">
+          <circle cx="28" cy="16" r="8"/>
+          <circle cx="10" cy="42" r="6"/>
+          <circle cx="46" cy="42" r="6"/>
+          <line x1="28" y1="24" x2="28" y2="34"/>
+          <line x1="28" y1="34" x2="13" y2="42" stroke="#c8860a"/>
+          <line x1="28" y1="34" x2="43" y2="42" stroke="#c8860a"/>
+          <circle cx="28" cy="34" r="3" fill="#c8860a" stroke="none"/>
+        </svg>
+        <span style="font-size:0.65rem; font-weight:700; letter-spacing:2px; color:#c8860a">03</span>
+      </div>
+      <div>
+        <h3 style="font-size:1.4rem; font-weight:900; color:#1a1a1a; margin-bottom:14px; font-family:Avenir,sans-serif">Construcción de Cultura, Propósito e Identidad</h3>
+        <p style="font-size:1rem; color:#555; font-weight:300; line-height:1.85">{servicios[2].texto}</p>
+      </div>
+    </div>
+
+    <!-- 04 -->
+    <div style="display:grid; grid-template-columns:80px 1fr; gap:40px; align-items:start; padding:48px 0; border-top:1px solid #e8e8e8">
+      <div style="display:flex; flex-direction:column; align-items:center; gap:10px">
+        <svg viewBox="0 0 56 56" fill="none" stroke="#1a1a1a" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" style="width:52px;height:52px">
+          <path d="M18 8h20v18a10 10 0 01-20 0V8z"/>
+          <path d="M38 14h8a3 3 0 010 6h-8"/>
+          <path d="M18 14h-8a3 3 0 000 6h8"/>
+          <line x1="28" y1="36" x2="28" y2="44"/>
+          <rect x="18" y="44" width="20" height="6" rx="2" stroke="#c8860a"/>
+        </svg>
+        <span style="font-size:0.65rem; font-weight:700; letter-spacing:2px; color:#c8860a">04</span>
+      </div>
+      <div>
+        <h3 style="font-size:1.4rem; font-weight:900; color:#1a1a1a; margin-bottom:14px; font-family:Avenir,sans-serif">Comunicación Planes de Incentivo</h3>
+        <p style="font-size:1rem; color:#555; font-weight:300; line-height:1.85">{servicios[3].texto}</p>
+      </div>
+    </div>
+
+    <!-- 05 Creación de Contenidos - lápiz + documento -->
+    <div style="display:grid; grid-template-columns:80px 1fr; gap:40px; align-items:start; padding:48px 0; border-top:1px solid #e8e8e8">
+      <div style="display:flex; flex-direction:column; align-items:center; gap:10px">
+        <svg viewBox="0 0 56 56" fill="none" stroke="#1a1a1a" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" style="width:52px;height:52px">
+          <path d="M10 50V18L20 6h24a3 3 0 013 3v41a3 3 0 01-3 3H13a3 3 0 01-3-3z"/>
+          <path d="M20 6v12H10"/>
+          <line x1="20" y1="26" x2="38" y2="26"/>
+          <line x1="20" y1="33" x2="38" y2="33"/>
+          <line x1="20" y1="40" x2="30" y2="40"/>
+          <path d="M35 44l2-2 6 6-2 2z" stroke="#c8860a"/>
+          <path d="M37 42l4-4" stroke="#c8860a"/>
+        </svg>
+        <span style="font-size:0.65rem; font-weight:700; letter-spacing:2px; color:#c8860a">05</span>
+      </div>
+      <div>
+        <h3 style="font-size:1.4rem; font-weight:900; color:#1a1a1a; margin-bottom:14px; font-family:Avenir,sans-serif">Creación de Contenidos y Experiencia</h3>
+        <p style="font-size:1rem; color:#555; font-weight:300; line-height:1.85">{servicios[4].texto}</p>
+      </div>
+    </div>
+
+    <!-- 06 Employee Experience - persona con corazón -->
+    <div style="display:grid; grid-template-columns:80px 1fr; gap:40px; align-items:start; padding:48px 0; border-top:1px solid #e8e8e8">
+      <div style="display:flex; flex-direction:column; align-items:center; gap:10px">
+        <svg viewBox="0 0 56 56" fill="none" stroke="#1a1a1a" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" style="width:52px;height:52px">
+          <circle cx="28" cy="16" r="9"/>
+          <path d="M10 50c0-10 8-16 18-16s18 6 18 16"/>
+          <path d="M22 18c0-2 2-3 3-3s3 1 3 3c0 3-6 6-6 6s6-3 6-6" stroke="#c8860a" stroke-width="1.4"/>
+        </svg>
+        <span style="font-size:0.65rem; font-weight:700; letter-spacing:2px; color:#c8860a">06</span>
+      </div>
+      <div>
+        <h3 style="font-size:1.4rem; font-weight:900; color:#1a1a1a; margin-bottom:14px; font-family:Avenir,sans-serif">Employee Experience</h3>
+        <p style="font-size:1rem; color:#555; font-weight:300; line-height:1.85">{servicios[5].texto}</p>
+      </div>
+    </div>
+
+    <!-- 07 -->
+    <div style="display:grid; grid-template-columns:80px 1fr; gap:40px; align-items:start; padding:48px 0; border-top:1px solid #e8e8e8">
+      <div style="display:flex; flex-direction:column; align-items:center; gap:10px">
+        <svg viewBox="0 0 56 56" fill="none" stroke="#1a1a1a" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" style="width:52px;height:52px">
+          <circle cx="22" cy="18" r="9"/>
+          <path d="M6 50c0-10 7-16 16-16s16 6 16 50"/>
+          <path d="M38 22 l10 5-10 5" stroke="#c8860a"/>
+          <line x1="38" y1="27" x2="48" y2="27" stroke="#c8860a"/>
+        </svg>
+        <span style="font-size:0.65rem; font-weight:700; letter-spacing:2px; color:#c8860a">07</span>
+      </div>
+      <div>
+        <h3 style="font-size:1.4rem; font-weight:900; color:#1a1a1a; margin-bottom:14px; font-family:Avenir,sans-serif">Employee Advocacy</h3>
+        <p style="font-size:1rem; color:#555; font-weight:300; line-height:1.85">{servicios[6].texto}</p>
+      </div>
+    </div>
+
+    <!-- 08 -->
+    <div style="display:grid; grid-template-columns:80px 1fr; gap:40px; align-items:start; padding:48px 0; border-top:1px solid #e8e8e8; border-bottom:1px solid #e8e8e8">
+      <div style="display:flex; flex-direction:column; align-items:center; gap:10px">
+        <svg viewBox="0 0 56 56" fill="none" stroke="#1a1a1a" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" style="width:52px;height:52px">
+          <rect x="4" y="16" width="34" height="24" rx="3"/>
+          <path d="M38 22l14-8v28l-14-8"/>
+          <circle cx="21" cy="28" r="5" stroke="#c8860a"/>
+          <circle cx="21" cy="28" r="2" fill="#c8860a" stroke="none"/>
+        </svg>
+        <span style="font-size:0.65rem; font-weight:700; letter-spacing:2px; color:#c8860a">08</span>
+      </div>
+      <div>
+        <h3 style="font-size:1.4rem; font-weight:900; color:#1a1a1a; margin-bottom:14px; font-family:Avenir,sans-serif">Producciones</h3>
+        <p style="font-size:1rem; color:#555; font-weight:300; line-height:1.85">{servicios[7].texto}</p>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- Propuesta de valor -->
+  <section style="position:relative; padding:100px 80px; overflow:hidden">
+    <img src="/images/305c230mm_2_1_.jpg" alt="" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:center; z-index:0" />
+    <div style="position:absolute; inset:0; background:rgba(248,245,238,0.88); z-index:1"></div>
+    <div style="position:relative; z-index:2; max-width:1100px; margin:0 auto">
+      <p style="font-size:0.75rem; font-weight:700; letter-spacing:4px; text-transform:uppercase; color:#c8860a; margin-bottom:16px; text-align:center">Nuestra diferencia</p>
+      <h2 style="font-size:2.5rem; font-weight:900; text-align:center; margin-bottom:64px; color:#1a1a1a; font-family:Avenir,sans-serif">Propuesta de valor</h2>
+      <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:32px">
+        <div style="padding:40px; background:white; box-shadow:0 4px 24px rgba(0,0,0,0.06)">
+          <svg viewBox="0 0 48 48" fill="none" stroke="#c8860a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="width:40px;height:40px;margin-bottom:20px">
+            <circle cx="24" cy="24" r="10"/>
+            <line x1="24" y1="4" x2="24" y2="10"/>
+            <line x1="24" y1="38" x2="24" y2="44"/>
+            <line x1="4" y1="24" x2="10" y2="24"/>
+            <line x1="38" y1="24" x2="44" y2="24"/>
+            <line x1="9" y1="9" x2="13" y2="13"/>
+            <line x1="35" y1="35" x2="39" y2="39"/>
+            <line x1="39" y1="9" x2="35" y2="13"/>
+            <line x1="13" y1="35" x2="9" y2="39"/>
+          </svg>
+          <h3 style="font-size:1rem; font-weight:900; color:#1a1a1a; margin-bottom:14px; font-family:Avenir,sans-serif">Creatividad e Identidad Visual</h3>
+          <p style="font-size:0.9rem; color:#666; font-weight:300; line-height:1.8">Cada pieza gráfica refleja nuestro compromiso con la dedicación y el cariño, asegurando que la información cautive y sorprenda a las audiencias.</p>
+        </div>
+        <div style="padding:40px; background:white; box-shadow:0 4px 24px rgba(0,0,0,0.06)">
+          <svg viewBox="0 0 48 48" fill="none" stroke="#c8860a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="width:40px;height:40px;margin-bottom:20px">
+            <path d="M24 8l3 9h9l-7 5 3 9-8-6-8 6 3-9-7-5h9z"/>
+          </svg>
+          <h3 style="font-size:1rem; font-weight:900; color:#1a1a1a; margin-bottom:14px; font-family:Avenir,sans-serif">Siempre Buscando una Idea</h3>
+          <p style="font-size:0.9rem; color:#666; font-weight:300; line-height:1.8">La innovación y la creatividad son el corazón de todo lo que hacemos. A cada proyecto le damos una vuelta creativa que deja una impresión memorable.</p>
+        </div>
+        <div style="padding:40px; background:white; box-shadow:0 4px 24px rgba(0,0,0,0.06)">
+          <svg viewBox="0 0 48 48" fill="none" stroke="#c8860a" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="width:40px;height:40px;margin-bottom:20px">
+            <rect x="4" y="12" width="28" height="20" rx="3"/>
+            <path d="M32 20l12-8v24l-12-8"/>
+          </svg>
+          <h3 style="font-size:1rem; font-weight:900; color:#1a1a1a; margin-bottom:14px; font-family:Avenir,sans-serif">Especialización Audiovisual</h3>
+          <p style="font-size:0.9rem; color:#666; font-weight:300; line-height:1.8">Desde animaciones hasta grabaciones en múltiples formatos, manejamos cada detalle desde la conceptualización hasta la postproducción.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Video -->
+  <section style="background:#1a1a1a; padding:100px 80px; display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:center">
+    <div>
+      <p style="font-size:0.75rem; font-weight:700; letter-spacing:4px; text-transform:uppercase; color:#f5c518; margin-bottom:24px">En acción</p>
+      <h2 style="font-size:2.2rem; font-weight:900; color:white; line-height:1.2; margin-bottom:24px; font-family:Avenir,sans-serif">Nuestra forma de transformar la comunicación</h2>
+      <p style="font-size:1rem; color:#aaa; font-weight:300; line-height:1.8; margin-bottom:40px">Nuestra misión es convertir cada interacción en una oportunidad para fortalecer el sentido de pertenencia, fomentar la innovación y asegurar que cada colaborador se sienta valorado y empoderado.</p>
+      <a href="/#contacto" style="display:inline-block; background:#f5c518; color:#1a1a1a; padding:16px 40px; font-size:0.85rem; font-weight:900; letter-spacing:3px; text-transform:uppercase; text-decoration:none; font-family:Avenir,sans-serif">Conversemos</a>
+    </div>
+    <div style="position:relative; width:100%; padding-bottom:56.25%">
+      <iframe
+        src="https://www.youtube.com/embed/4WKqL4MjxCE"
+        title="Agencia Elefan"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+        style="position:absolute; inset:0; width:100%; height:100%"
+      ></iframe>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer style="background:#111; padding:40px 80px; display:flex; align-items:center; justify-content:space-between">
+    <img src="/images/logo-elefan.png" alt="Elefan" style="height:36px; filter:invert(1)" />
+    <nav style="display:flex; gap:32px">
+      <a href="/" style="color:#555; text-decoration:none; font-size:0.75rem; letter-spacing:2px; text-transform:uppercase; font-weight:300">Home</a>
+      <a href="/proyectos" style="color:#555; text-decoration:none; font-size:0.75rem; letter-spacing:2px; text-transform:uppercase; font-weight:300">Proyectos</a>
+      <a href="/blog" style="color:#555; text-decoration:none; font-size:0.75rem; letter-spacing:2px; text-transform:uppercase; font-weight:300">Blog</a>
+    </nav>
+    <p style="color:#444; font-size:0.75rem; font-weight:300">© 2025 Agencia Elefan</p>
+  </footer>
+
+</Layout>

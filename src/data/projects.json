@@ -16,7 +16,8 @@
       "http://www.elefan.cl/wp-content/uploads/2014/04/DSC_0111.jpg",
       "http://www.elefan.cl/wp-content/uploads/2014/04/DSC_0092.jpg",
       "http://www.elefan.cl/wp-content/uploads/2014/04/DSC_0258.jpg"
-    ]
+    ],
+    "heroImage": "http://www.elefan.cl/wp-content/uploads/2014/04/DSC_00051.jpg"
   },
   {
     "title": "Proyecto Te Quiero Ver / Espacio Ve & VTR",
@@ -34,19 +35,8 @@
       "http://www.elefan.cl/wp-content/uploads/2014/04/VTr-cuatro-Quo.png",
       "http://www.elefan.cl/wp-content/uploads/2014/04/Foto-Chica-caso-VTR.png",
       "http://www.elefan.cl/wp-content/uploads/2014/04/la-foto2.jpg"
-    ]
-  },
-  {
-    "title": "Campaña The Modern Frontier, Levi`s",
-    "slug": "videos-the-modern-frontier-levis",
-    "categories": [
-      "Comunicación Masiva",
-      "Producción"
     ],
-    "video": "",
-    "image": "http://www.elefan.cl/wp-content/uploads/2014/04/Foto-chica-videos-Levis.png",
-    "description": "Estos fueron los videos que anticipaban el evento, usamos a los propios expositores y a los embajadores de la marca para que los protagonizaran.",
-    "gallery": []
+    "heroImage": "http://www.elefan.cl/wp-content/uploads/2014/04/Captura-de-pantalla-2014-12-19-a-las-15.32.02.png"
   },
   {
     "title": "The Modern Frontier, Levi’s chile – Museo Ferroviario",
@@ -55,7 +45,7 @@
       "Comunicación Masiva",
       "Producción"
     ],
-    "video": "",
+    "video": "https://vimeo.com/76344057",
     "image": "http://www.elefan.cl/wp-content/uploads/2014/04/Captura-de-pantalla-2014-12-18-a-las-18.55.31.png",
     "description": "Ideamos un evento en el Museo Ferroviario de la Quinta Normal, fue en un día increíble y primaveral donde dimos vida a un proyecto colaborativo que contó con 5 Workshop Creativos a cargo de: Productora Fábula, Librería Qué Leo, Estudio de Body Art Amor Real, Academia 101 Training y el colectivo Stgo Under Crew. El contenido fue diverso, tanto así, que uno de los vagones (del 1920) tenía un escenario donde además se presentaron: la Compañía La Patiperra y su obra Camilo y los Mitos; Fabiola Matte \"Lectura de Poemas de Leonard Cohen\" y Pablo Ilabaca como Jaco Sánchez. Un festival de expresiones donde también había una zona taller donde la gente participaba en una dinámica con manualidades donde podían customizar su ropa hasta pintar al estilo graffiti.Todo eso sumado al entorno que sin duda fue de lo más disfrutado de la tarde.PGJyPg==PGJyPjxicj4=PGJyPg==",
     "gallery": [
@@ -71,7 +61,8 @@
       "http://www.elefan.cl/wp-content/uploads/2014/04/ambient-d-627x330.jpg",
       "http://www.elefan.cl/wp-content/uploads/2014/04/ambient-e-627x330.jpg",
       "http://www.elefan.cl/wp-content/uploads/2014/04/ambient-f-627x330.jpg"
-    ]
+    ],
+    "heroImage": "http://www.elefan.cl/wp-content/uploads/2014/04/Captura-de-pantalla-2014-12-18-a-las-18.55.31.png"
   },
   {
     "title": "Maso de Cartas de las 24 fortalezas.",
@@ -96,7 +87,8 @@
       "http://www.elefan.cl/wp-content/uploads/2014/12/Carta-8-01.jpg",
       "http://www.elefan.cl/wp-content/uploads/2014/12/original-carta-7-01.jpg",
       "http://www.elefan.cl/wp-content/uploads/2014/12/original-carta-6-01.jpg"
-    ]
+    ],
+    "heroImage": "http://www.elefan.cl/wp-content/uploads/2014/12/la-foto-3.jpg"
   },
   {
     "title": "Inauguración Johnny Rockets Mall Plaza Vespucio",
@@ -105,7 +97,7 @@
       "Comunicación Masiva",
       "Producción"
     ],
-    "video": "",
+    "video": "https://youtu.be/RUbjEjtuiQw",
     "image": "http://www.elefan.cl/wp-content/uploads/2015/01/DSC_0354.jpg",
     "description": "Durante un fin de semana hicimios diversas acciones para celebrar la inauguración del nuevo local de la cadena Johnny Rockets ubicado en el Mall Plaza Vespucio; show de baile, fotos de época y la gran presentación del doble de Elvis. Jornadas llenas de alegría que durante el verano seguiremos repitiendo en distintos locales de la cadena.\nPGJyPg==PGJyPjxicj4=PGJyPg==",
     "gallery": [
@@ -121,7 +113,8 @@
       "http://www.elefan.cl/wp-content/uploads/2015/01/DSC_0378.jpg",
       "http://www.elefan.cl/wp-content/uploads/2015/01/DSC_0389.jpg",
       "http://www.elefan.cl/wp-content/uploads/2015/01/DSC_0760.jpg"
-    ]
+    ],
+    "heroImage": "http://www.elefan.cl/wp-content/uploads/2015/01/DSC_0118.jpg"
   },
   {
     "title": "Manual de Alfabetización Emocional",
@@ -145,7 +138,8 @@
       "http://www.elefan.cl/wp-content/uploads/2015/06/DSC_8047.jpg",
       "http://www.elefan.cl/wp-content/uploads/2015/06/DSC_8052.jpg",
       "http://www.elefan.cl/wp-content/uploads/2015/06/DSC_8043.jpg"
-    ]
+    ],
+    "heroImage": "http://www.elefan.cl/wp-content/uploads/2015/06/Captura-de-pantalla-2015-06-28-a-las-0.53.56.png"
   },
   {
     "title": "Nueva imagen consultora EspacioVe",
@@ -166,7 +160,8 @@
       "http://www.elefan.cl/wp-content/uploads/2016/02/Captura-de-pantalla-2016-02-12-a-las-12.08.21.png",
       "http://www.elefan.cl/wp-content/uploads/2016/02/Captura-de-pantalla-2016-02-12-a-las-12.06.40.png",
       "http://www.elefan.cl/wp-content/uploads/2016/02/IMG_2690.jpg"
-    ]
+    ],
+    "heroImage": "http://www.elefan.cl/wp-content/uploads/2016/02/Captura-de-pantalla-2016-02-12-a-las-12.12.19.png"
   },
   {
     "title": "El Libro de la Confianza - \"Historias que nos involucran\"",
@@ -187,7 +182,8 @@
       "http://www.elefan.cl/wp-content/uploads/2016/09/Libro-7.jpg",
       "http://www.elefan.cl/wp-content/uploads/2016/09/Libro-8.jpg",
       "http://www.elefan.cl/wp-content/uploads/2016/09/libro-9.jpg"
-    ]
+    ],
+    "heroImage": "http://www.elefan.cl/wp-content/uploads/2016/09/Portada-caso.png"
   },
   {
     "title": "Eventos Levi`s - Festival Season #LiveInLevis",
@@ -196,7 +192,7 @@
       "Comunicación Masiva",
       "Producción"
     ],
-    "video": "",
+    "video": "https://vimeo.com/211724692",
     "image": "http://www.elefan.cl/wp-content/uploads/2017/04/Lev-26.png",
     "description": "En dos jornadas intensas llenas de música, moda, diseño y ambiente festivalero creamos el Festival Season versión Chile para Levi`s. Donde buscamos entregar una experiencia que ayudara a los fans de la marca a encontrar su look ideal para el festival que venía y enfatizar cómo Levi`s a lo largo de la historia a vestido estos grandes eventos.\n\nEn el primer día pudimos vivir una experiencia donde habían diversas actividades que potenciaban la conceptualización de la idea: había estación de customización de ropa donde la gente pudo participar en un ambiente de taller y mucha creatividad creando su propio look.  También había espacio para Tattoo al instante y la sensación de la noche una muy cool barbería.\n\nEn paralelo a todo esto, dos artistas creando una obra en vivo, donde de fondo sonaba la música de Sin Orbita,  Fernando Milagros y DJ Caso. Pero todo terminó al segundo día previo al festival con un brunch en la Galería Cima en plena Plaza Italia y con una vista impresionante del centro de la ciudad. Una bella forma de cerrar esta increíble experiencia.PGJyPg==PGJyPjxicj4=PGJyPg==",
     "gallery": [
@@ -212,7 +208,8 @@
       "http://www.elefan.cl/wp-content/uploads/2017/04/Lev-28.png",
       "http://www.elefan.cl/wp-content/uploads/2017/04/Lev-29.png",
       "http://www.elefan.cl/wp-content/uploads/2017/04/Lev-30.png"
-    ]
+    ],
+    "heroImage": "http://www.elefan.cl/wp-content/uploads/2017/04/Lev-26.png"
   },
   {
     "title": "Desfile Primavera Verano - Levis",
@@ -221,7 +218,7 @@
       "Capacitación",
       "Comunicación Masiva"
     ],
-    "video": "",
+    "video": "https://vimeo.com/240028465",
     "image": "http://www.elefan.cl/wp-content/uploads/2017/10/thumb-desfile.jpg",
     "description": "En el Restorant La Sociedad del Paseo Mañío, realizamos el lanzamiento de la temporada primavera de Levis, en un ambiente lleno de detalles florales y de decoración fotografiables, que generaron un entorno ondero y lleno de detalles. Donde luego de la recepción entró en escena el defile con la nueva colección de la marca. El cierre estuvo a cargo de las comediantes Jani Dueñas y Paloma Salas quienes compartieron con los invitados desde una mirada más bohemia. Grata jornada, buenos momentos que esperamos seguir repitiendo. Salud.PGJyPg==PGJyPjxicj4=PGJyPg==",
     "gallery": [
@@ -237,7 +234,8 @@
       "http://www.elefan.cl/wp-content/uploads/2017/10/desfile-10.jpg",
       "http://www.elefan.cl/wp-content/uploads/2017/10/desfile-11.jpg",
       "http://www.elefan.cl/wp-content/uploads/2017/10/desfile-12.jpg"
-    ]
+    ],
+    "heroImage": "http://www.elefan.cl/wp-content/uploads/2017/10/thumb-desfile.jpg"
   },
   {
     "title": "501 DAY - Levis",
@@ -247,7 +245,7 @@
       "Comunicación Interna",
       "Comunicación Masiva"
     ],
-    "video": "",
+    "video": "https://vimeo.com/240027581",
     "image": "http://www.elefan.cl/wp-content/uploads/2017/10/levis-2.jpg",
     "description": "Junto a Levis, nos tomamos un espacio del Centro Comercial Parque Arauco donde acompañados del talento de Ignacia Jullian celebramos el aniversario del jeans más antiguo del mundo, o más bien dicho, el primero, el 501 de Levis, hito que se celebró en paralelo en todo el mundo. Acá en Chile montamos talleres donde la gente, previa mecánica de inscripción, podía customizar su ropa o cualquier supercie de Jeans, ya sea con bordado, stencil, tachas, etc. En un entorno lleno de colores donde muchos volvimos a las manualidades, transformándose para todos quienes participaron en una grata experiencia.",
     "gallery": [
@@ -263,7 +261,8 @@
       "http://www.elefan.cl/wp-content/uploads/2017/10/levis-pa-16.jpg",
       "http://www.elefan.cl/wp-content/uploads/2017/10/levis-pa-15.jpg",
       "http://www.elefan.cl/wp-content/uploads/2017/10/levis-pa-14.jpg"
-    ]
+    ],
+    "heroImage": "http://www.elefan.cl/wp-content/uploads/2017/10/levis-2.jpg"
   },
   {
     "title": "Evento Aguas Andinas - Lanzamiento Escuela de Liderazgo",
@@ -280,7 +279,8 @@
       "http://www.elefan.cl/wp-content/uploads/2017/11/AA-6.png",
       "http://www.elefan.cl/wp-content/uploads/2017/11/AA-7.png",
       "http://www.elefan.cl/wp-content/uploads/2017/11/AA-8.png"
-    ]
+    ],
+    "heroImage": "http://www.elefan.cl/wp-content/uploads/2017/11/IMG_8584.jpg"
   },
   {
     "title": "Deco Levis - Desfile Primavera Verano",
@@ -298,7 +298,8 @@
       "http://www.elefan.cl/wp-content/uploads/2017/11/L3.jpg",
       "http://www.elefan.cl/wp-content/uploads/2017/11/L2.jpg",
       "http://www.elefan.cl/wp-content/uploads/2017/11/L1.jpg"
-    ]
+    ],
+    "heroImage": "http://www.elefan.cl/wp-content/uploads/2017/11/Portada-4B-1.png"
   },
   {
     "title": "Proyecto Mateo - Cencosud-Scotiabank",
@@ -308,7 +309,7 @@
       "Comunicación Interna",
       "Producción"
     ],
-    "video": "",
+    "video": "https://vimeo.com/259573147",
     "image": "http://www.elefan.cl/wp-content/uploads/2018/03/mateo-3.png",
     "description": "Este proyecto lo realizamos para el Área de Capacitación de nuestro cliente Cencosud-Scotiabank, donde creamos un personaje muy en sintonía con el target, él era el encargado de entregar diversos contenidos en distintas cápsulas de video alojadas en una plataforma de E-learning. Este \"rostro del área\" realizaba cursos de capacitación para ventas, inducciones, información de procedimientos internos, cambios estructurales, etc. Un mundo lleno de creatividad detrás de este personaje llamado Mateo que fuimos construyendo en estos últimos meses; que transformó las antiguas láminas de \"ppt\" en entretenidos videos tutoriales. Pase a mirar.PGJyPg==PGJyPjxicj4=PGJyPg==",
     "gallery": [
@@ -324,7 +325,8 @@
       "http://www.elefan.cl/wp-content/uploads/2018/03/mateo-11.png",
       "http://www.elefan.cl/wp-content/uploads/2018/03/mateo-12.png",
       "http://www.elefan.cl/wp-content/uploads/2018/03/mateo-13.png"
-    ]
+    ],
+    "heroImage": "http://www.elefan.cl/wp-content/uploads/2018/03/mateo-3.png"
   },
   {
     "title": "Proyecto Levis Fest / Evento Levis Chile",
@@ -334,7 +336,7 @@
       "Comunicación Masiva",
       "Eventos"
     ],
-    "video": "",
+    "video": "https://vimeo.com/263357545",
     "image": "http://www.elefan.cl/wp-content/uploads/2018/04/Foto-portafolio-1.jpg",
     "description": "En los jardines del Parque Titanium y al costado del Río Mapocho realizamos este entretenido proyecto para Levis, fue todo entorno al ambiente festivalero de la época de marzo donde creamos Levis Fest; un increíble evento donde los amigos de la marca disfrutaron de diversas actividades, fueron libres de hacer lo que quisieran: customizar ropa, pintar, encontrar su look, bailar o escuchar música en vivo en un lugar donde nunca antes se había hecho algo, el resultado fue espectacular.PGJyPg==PGJyPjxicj4=PGJyPg==",
     "gallery": [
@@ -350,7 +352,8 @@
       "http://www.elefan.cl/wp-content/uploads/2018/04/Doce-olla.jpg",
       "http://www.elefan.cl/wp-content/uploads/2018/04/diez-lolla.jpg",
       "http://www.elefan.cl/wp-content/uploads/2018/04/Dieciseis-lolla.jpg"
-    ]
+    ],
+    "heroImage": "http://www.elefan.cl/wp-content/uploads/2018/04/uno-lolla.jpg"
   },
   {
     "title": "Proyecto - Humind Marca",
@@ -366,7 +369,8 @@
       "http://www.elefan.cl/wp-content/uploads/2018/10/Web-humind-uno.jpg",
       "http://www.elefan.cl/wp-content/uploads/2018/10/Web-humind-dos.jpg",
       "http://www.elefan.cl/wp-content/uploads/2018/10/lateral-B-1.jpg"
-    ]
+    ],
+    "heroImage": "http://www.elefan.cl/wp-content/uploads/2018/10/Mundo-Humind-principal-.jpg"
   },
   {
     "title": "Proyecto Humind – Cápsulas Servicio al Cliente",
@@ -376,7 +380,7 @@
       "Comunicación Interna",
       "Producción"
     ],
-    "video": "",
+    "video": "https://vimeo.com/292642743",
     "image": "http://www.elefan.cl/wp-content/uploads/2018/10/Nueva-principal-SC_.jpg",
     "description": "Este es otro proyecto con nuestros amigos de Humind, esta vez nos invitaron a realizar con nuestra mirada creativa, cápsulas de video para su curso de capacitación sobre el Servicio al Cliente. Donde el experto en el tema Fernando Ansúrez explica de manera lúdica y con ayuda de nuestros actores, los conceptos básicos para ser fuerte en el Servicio al Cliente.PGJyPg==PGJyPjxicj4=PGJyPg==",
     "gallery": [
@@ -392,7 +396,8 @@
       "http://www.elefan.cl/wp-content/uploads/2018/10/e4c8f9a8-83d2-44c0-9a7e-23337dfbd0bf.jpg",
       "http://www.elefan.cl/wp-content/uploads/2018/10/f1eb301d-6dca-4df6-aa28-2cca0f0c0347.jpg",
       "http://www.elefan.cl/wp-content/uploads/2018/10/f3d403b5-6bbd-4b2c-a3cd-9a72392af054.jpg"
-    ]
+    ],
+    "heroImage": "http://www.elefan.cl/wp-content/uploads/2018/10/Nueva-principal-SC_.jpg"
   },
   {
     "title": "Proyecto Achs– Cápsulas Acuerdos",
@@ -402,10 +407,11 @@
       "Comunicación Interna",
       "Producción"
     ],
-    "video": "",
+    "video": "https://vimeo.com/292642823",
     "image": "http://www.elefan.cl/wp-content/uploads/2018/10/Imagen-principal.jpg",
     "description": "Realización de video para iniciativa interna que invita a lograr y generar buenos acuerdos en tu trabajo de equipo del día a día. Inventamos un personaje tipo Youtuber quien compartía contenidos relevantes e invitaba a las personas a ser parte de la campaña.PGJyPg==PGJyPjxicj4=PGJyPg==",
-    "gallery": []
+    "gallery": [],
+    "heroImage": "http://www.elefan.cl/wp-content/uploads/2018/10/Imagen-principal.jpg"
   },
   {
     "title": "Proyecto Achs– Cápsulas Escuela de Liderazgo",
@@ -415,7 +421,7 @@
       "Comunicación Interna",
       "Producción"
     ],
-    "video": "",
+    "video": "https://vimeo.com/292789518",
     "image": "http://www.elefan.cl/wp-content/uploads/2018/10/Nueva-Principal-Achs-Mix_.jpg",
     "description": "Realizamos esta serie de didácticos videos enmarcados en la Escuela de Liderazgo de La Achs y en específico para el área de Desarrollo Organizacional. Un proyecto donde exploramos distintas formas para entregar los contenidos. En este video un breve resumen.PGJyPg==PGJyPjxicj4=PGJyPg==",
     "gallery": [
@@ -423,7 +429,8 @@
       "http://www.elefan.cl/wp-content/uploads/2018/10/Achs-dibu-dos.jpg",
       "http://www.elefan.cl/wp-content/uploads/2018/10/Achs-dibu-tres.jpg",
       "http://www.elefan.cl/wp-content/uploads/2018/10/Achs-dibu-cuatro-encabezado-interior.jpg"
-    ]
+    ],
+    "heroImage": "http://www.elefan.cl/wp-content/uploads/2018/10/Nueva-Principal-Achs-Mix_.jpg"
   },
   {
     "title": "Adelanto de Proyecto – Insert para Cápsulas",
@@ -432,10 +439,11 @@
       "Capacitación",
       "Producción"
     ],
-    "video": "",
+    "video": "https://vimeo.com/292809467",
     "image": "http://www.elefan.cl/wp-content/uploads/2018/10/Principal-Insert.jpg",
     "description": "Estamos trabajando un proyecto que nos tiene muy motivados y que es secreto por ahora. Les podemos adelantar que son una serie de insert que serán muy útiles y de complemento para unas cápsulas que hemos estado trabajando, donde exploramos diversas y entretenidas técnicas, he acá un resumen de algunas.PGJyPg==PGJyPjxicj4=PGJyPg==",
-    "gallery": []
+    "gallery": [],
+    "heroImage": "http://www.elefan.cl/wp-content/uploads/2018/10/Principal-Insert.jpg"
   },
   {
     "title": "Proyecto Humind - Cápsulas Cursos",
@@ -445,7 +453,7 @@
       "Comunicación Interna",
       "Producción"
     ],
-    "video": "",
+    "video": "https://vimeo.com/292642786",
     "image": "http://www.elefan.cl/wp-content/uploads/2018/10/Empo-cinco-principal.jpg",
     "description": "Nuestros amigos de Humind nos encargaron el entretenido desafío de darles una conceptualización y mirada creativa a sus cursos. Para eso, ideamos, realizamos y produjimos una serie de cápsulas para 3 tipos de capacitaciones. Los temas tratados son muy relevantes para los tiempos de hoy, porque profundizan sobre la Inteligencia Colectiva, Cómo Generar Mejores Acuerdos y Cómo Empoderar a los Equipos para el trabajo del día a día en las organizaciones. Sin lugar a dudas, un proyecto que disfrutamos mucho hacer.PGJyPg==PGJyPjxicj4=PGJyPg==",
     "gallery": [
@@ -461,7 +469,8 @@
       "http://www.elefan.cl/wp-content/uploads/2018/10/Empo-ocho.jpg",
       "http://www.elefan.cl/wp-content/uploads/2018/10/Empo-once.jpg",
       "http://www.elefan.cl/wp-content/uploads/2018/10/Empo-seis.jpg"
-    ]
+    ],
+    "heroImage": "http://www.elefan.cl/wp-content/uploads/2018/10/Empo-cinco-principal.jpg"
   },
   {
     "title": "Recicla tus Jeans - Campaña Levis y Caritas",
@@ -481,6 +490,12 @@
       "http://www.elefan.cl/wp-content/uploads/2018/11/Galería-levis-5.jpeg",
       "http://www.elefan.cl/wp-content/uploads/2018/11/Galería-levis3.jpeg",
       "http://www.elefan.cl/wp-content/uploads/2018/11/Tienda-recicla.png"
+    ],
+    "heroImage": "http://www.elefan.cl/wp-content/uploads/2018/11/Foto-Principal-1.png",
+    "extraVideos": [
+      "https://vimeo.com/300852435",
+      "https://vimeo.com/300852305",
+      "https://vimeo.com/300852028"
     ]
   },
   {
@@ -501,7 +516,8 @@
       "http://www.elefan.cl/wp-content/uploads/2020/10/Pasión-CS_Mesa-de-trabajo-1.png",
       "http://www.elefan.cl/wp-content/uploads/2020/10/Colaboración-CS_Mesa-de-trabajo-1.png",
       "http://www.elefan.cl/wp-content/uploads/2020/10/Transparencia-CS_Mesa-de-trabajo-1.png"
-    ]
+    ],
+    "heroImage": "http://www.elefan.cl/wp-content/uploads/2020/10/Portada-valores-1.png"
   },
   {
     "title": "JIJI - Próximamente",
@@ -520,7 +536,8 @@
       "http://www.elefan.cl/wp-content/uploads/2020/10/JIJI-cuatro.png",
       "http://www.elefan.cl/wp-content/uploads/2020/10/JIJI-tres.png",
       "http://www.elefan.cl/wp-content/uploads/2020/10/Jiji-uno.png"
-    ]
+    ],
+    "heroImage": "http://www.elefan.cl/wp-content/uploads/2020/10/Portada.png"
   },
   {
     "title": "Curso Apolo - Mundo Gráfico",
@@ -532,7 +549,8 @@
     "video": "https://youtube.com/watch?v=LmcfJrBX7cQ",
     "image": "http://www.elefan.cl/wp-content/uploads/2020/10/Portada-apolo-tres.png",
     "description": "Este proyecto lo realizamos para un área de capacitación, donde creamos un mundo gráfico para una serie animada que era una herramienta determinante de formación dentro de una empresa. Las personas interactúan de forma lúdica con los contenidos, en un entorno colorido, dinámico y con sentido educativo.PGJyPg==PGJyPjxicj4=PGJyPg==",
-    "gallery": []
+    "gallery": [],
+    "heroImage": "http://www.elefan.cl/wp-content/uploads/2020/10/Portada-apolo-tres.png"
   },
   {
     "title": "Hexágono Mágico",
@@ -544,7 +562,8 @@
     "video": "https://vimeo.com/505742212",
     "image": "http://www.elefan.cl/wp-content/uploads/2021/01/Portada-hexagono.png",
     "description": "Hicimos este Hexágono para presentar el propósito de una empresa y reflejar sus diversas áreas de negocios. Hubo mucho oficio en la creación y armado, fue una gran experiencia donde todo está hecho a mano con ingenio y reinterpretación. Dejamos un resumen de lo que fue su producción.",
-    "gallery": []
+    "gallery": [],
+    "heroImage": "http://www.elefan.cl/wp-content/uploads/2021/01/Portada-hexagono.png"
   },
   {
     "title": "Tip Digital: Innovando en la formación tecnológica.",
@@ -556,7 +575,8 @@
     "video": "https://vimeo.com/898336006",
     "image": "http://www.elefan.cl/wp-content/uploads/2023/12/Captura-de-Pantalla-2023-12-28-a-las-10.32.12.png",
     "description": "En la era de la transformación digital, enfrentamos el desafío de mantener a los equipos al día con las últimas herramientas de tecnología y software. Para un cliente en pleno proceso de digitalización, creamos 'Tip Digital', una serie de microcápsulas formativas protagonizadas por un carismático personaje experto en tecnología. Estas cápsulas, concisas y llenas de contenido práctico, se convirtieron en un recurso valioso para aprender sobre tecnologías digitales de manera divertida y accesible. Desde conceptos básicos hasta herramientas avanzadas, cada entrega de 'Tip Digital' facilitó el aprendizaje y la aplicación práctica de conocimientos tecnológicos, a la vez que fomentó la viralización del contenido en plataformas móviles. Este enfoque creativo y adaptado a los lenguajes visuales modernos ha demostrado ser una herramienta eficaz en la capacitación tecnológica, ayudando a nuestro cliente a avanzar con confianza en su camino hacia la digitalización.\n\nSi estás buscando maneras innovadoras de formar a tu equipo en tecnología y adaptación digital, contáctanos para descubrir cómo podemos ayudarte.",
-    "gallery": []
+    "gallery": [],
+    "heroImage": "http://www.elefan.cl/wp-content/uploads/2023/12/Captura-de-Pantalla-2023-12-28-a-las-10.32.12.png"
   },
   {
     "title": "Alerta AML: Educación innovadora en la lucha contra el fraude financiero.",
@@ -574,19 +594,8 @@
       "http://www.elefan.cl/wp-content/uploads/2023/12/3-AML.png",
       "http://www.elefan.cl/wp-content/uploads/2023/12/2-AML.png",
       "http://www.elefan.cl/wp-content/uploads/2023/12/AML-6.png"
-    ]
-  },
-  {
-    "title": "Libro: Una guía completa para futuros padres.",
-    "slug": "libro-una-guia-completa-para-futuros-padres",
-    "categories": [
-      "Capacitación",
-      "Comunicación Masiva"
     ],
-    "video": "https://youtube.com/watch?v=uYSfJnJyYIs",
-    "image": "http://www.elefan.cl/wp-content/uploads/2023/12/Copec-web.png",
-    "description": "Transformamos una idea visionaria en una realidad tangible y afectuosa con el proyecto 'Guía para Futuros Padres”. Este libro, diseñado como un regalo especial de uno de nuestros clientes a sus colaboradores que se convierten en padres, es mucho más que una simple guía; es un compendio de amor y apoyo. Nuestro equipo combinó habilidades en diseño gráfico y creatividad para crear un recurso valioso y único, que va desde consejos prácticos y guías hasta juegos y actividades lúdicas para hacer de este momento una experiencia más rica y llevadera. La recepción del libro fue extraordinaria, fortaleciendo el vínculo entre la empresa y las personas y demostrando el poder de un regalo corporativo bien pensado.\n\n¿Estás buscando maneras creativas y significativas de conectar con tu equipo? contáctanos para conocer cómo podemos hacer realidad tu visión.",
-    "gallery": []
+    "heroImage": "http://www.elefan.cl/wp-content/uploads/2023/12/AML-HOMEWEB.png"
   },
   {
     "title": "Sensibilizando sobre la salud mental: ¿Estás Bien?",
@@ -595,10 +604,11 @@
       "Comunicación Interna",
       "Comunicación Masiva"
     ],
-    "video": "https://vimeo.com/898345681",
+    "video": "https://youtube.com/shorts/yJO5f_g0Ztc",
     "image": "http://www.elefan.cl/wp-content/uploads/2023/12/Enaex-home-Salud-mental.png",
     "description": "Nos tocó aborda uno de los desafíos más importantes y sensibles de nuestra época: la concienciación sobre la salud mental. Para un cliente visionario, creamos este video entorno a la campaña '¿Estás Bien?', una iniciativa que va más allá del simple mensaje de concienciación. Nuestro enfoque era sensibilizar a la audiencia sobre la importancia de la conexión humana y la empatía, y lo logramos a través de un contenido que animaba a las personas a hacer una pregunta simple pero poderosa: '¿Estás bien?'. Este video no solo generó conversaciones cruciales sobre la salud mental dentro de la empresa, sino que también se convirtió en un catalizador para el cambio en la comunidad más amplia. La respuesta fue positiva, con un impacto que trascendió el mensaje, fomentando una cultura de cuidado y empatía\n\nSi deseas explorar cómo podemos ayudar a tu organización a abordar temas esenciales con sensibilidad y efectividad, contáctanos para saber más.",
-    "gallery": []
+    "gallery": [],
+    "heroImage": "http://www.elefan.cl/wp-content/uploads/2023/12/Enaex-home-Salud-mental.png"
   },
   {
     "title": "Creación de Personajes: Conectando valores y emociones en la comunicación corporativa.",
@@ -618,7 +628,8 @@
       "http://www.elefan.cl/wp-content/uploads/2023/12/valores-web-4.png",
       "http://www.elefan.cl/wp-content/uploads/2023/12/Valores-web-3.png",
       "http://www.elefan.cl/wp-content/uploads/2023/12/valores-web-2.png"
-    ]
+    ],
+    "heroImage": "http://www.elefan.cl/wp-content/uploads/2023/12/Valores-web-portada.png"
   },
   {
     "title": "Talentos Globales: Lanzamiento de una marca empleadora en tecnología.",
@@ -636,7 +647,8 @@
       "http://www.elefan.cl/wp-content/uploads/2023/12/Post2.jpg",
       "http://www.elefan.cl/wp-content/uploads/2023/12/Post4.jpg",
       "http://www.elefan.cl/wp-content/uploads/2023/12/Post3.jpg"
-    ]
+    ],
+    "heroImage": "http://www.elefan.cl/wp-content/uploads/2023/12/Softserve-web.png"
   },
   {
     "title": "Insiders: Potenciando la voz interna en Employee Advocacy.",
@@ -645,10 +657,11 @@
       "Comunicación Interna",
       "Comunicación Masiva"
     ],
-    "video": "",
+    "video": "https://youtube.com/shorts/PvkDocUC840",
     "image": "http://www.elefan.cl/wp-content/uploads/2023/12/Softserve-empliyee.png",
     "description": "En la Agencia creamos un innovador programa de Employee Advocacy junto a un destacado cliente del sector tecnológico. Nuestro reto era no solo animar al equipo a compartir contenido relevante sobre la empresa, sino también equiparlos con las herramientas y el conocimiento necesarios para hacerlo eficazmente. 'Insiders' transformó a los colaboradores en embajadores de la marca, protagonizando videos sobre temas clave y estratégicos, y recibiendo apoyo en la construcción de sus perfiles profesionales y planificación de publicaciones. Incorporamos elementos de gamificación para fomentar su participación, ya sea en entornos virtuales o presenciales.\n\nLos resultados fueron impresionantes: una activa participación de las personas, una notable amplificación del mensaje de la marca, y un aumento significativo en la visibilidad de la empresa en el espacio digital. Este enfoque no solo fortaleció la presencia en línea de la marca, sino que también generó un mayor sentido de pertenencia y orgullo entre los colaboradores.\n\nSi estás interesado en explorar estrategias de Employee Advocacy efectivas y creativas, contáctanos para saber cómo podemos potenciar la voz interna de tu empresa.",
-    "gallery": []
+    "gallery": [],
+    "heroImage": "http://www.elefan.cl/wp-content/uploads/2023/12/Softserve-web.png"
   },
   {
     "title": "Hotel SET: El servicio lo es todo.",
@@ -660,6 +673,7 @@
     "video": "https://youtube.com/watch?v=OzT5VUjgBfo",
     "image": "http://www.elefan.cl/wp-content/uploads/2025/08/Imagen-caso-hotel-SET.png",
     "description": "Junto a INACAP y la Consultora Flexworking, creamos Hotel SET, una serie educativa para quienes trabajan en el sector de la hospitalidad.\n\nNuestro desafío fue convertir la educación en una experiencia, transformando el contenido técnico en historias reales y personajes que se sienten cercanos. Así, demostramos que aprender y enseñar no tiene por qué ser aburrido, sino una forma de emocionar y conectar con la vocación de servicio.\n\nEl resultado es una herramienta de formación única, una serie educativa y un homenaje a la pasión por servir.\n\nConoce el proyecto completo en hotelset.cl",
-    "gallery": []
+    "gallery": [],
+    "heroImage": "http://www.elefan.cl/wp-content/uploads/2025/08/Imagen-caso-hotel-SET.png"
   }
 ]
