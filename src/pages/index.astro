@@ -108,7 +108,9 @@ import '../styles/global.css';
       <div class="contacto-form">
         <h2 class="contacto-title">Contacto</h2>
         <p class="contacto-intro">Si tienes una inquietud, una problemática o una idea que echar adelante, comunícate con nosotros.</p>
-        <form action="https://formspree.io/f/hola@elefan.cl" method="POST" class="form">
+        <form name="contacto" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="form">
+          <input type="hidden" name="form-name" value="contacto" />
+          <p style="display:none"><label>No llenar: <input name="bot-field" /></label></p>
           <div class="form__field">
             <label class="form__label">Nombre</label>
             <input name="nombre" type="text" required class="form__input" />
