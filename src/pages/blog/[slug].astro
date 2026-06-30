@@ -3,13 +3,6 @@ import Layout from '../../layouts/Layout.astro';
 import Navbar from '../../components/Navbar.astro';
 import '../../styles/global.css';
 
-export function getStaticPaths() {
-  return posts.map((post) => ({
-    params: { slug: post.slug },
-    props: { post }
-  }));
-}
-
 const posts = [
   {
     slug: "el-equilibrio-en-la-productividad-una-vision-mas-humana-y-sostenible",
@@ -70,6 +63,13 @@ const posts = [
     ]
   }
 ];
+
+export function getStaticPaths() {
+  return posts.map((post) => ({
+    params: { slug: post.slug },
+    props: { post }
+  }));
+}
 
 const { post } = Astro.props;
 ---
