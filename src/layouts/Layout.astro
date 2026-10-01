@@ -1,18 +1,91 @@
 ---
-const { title = "Elefan — Ideas audaces para empresas que inspiran", description = "Agencia Elefan. Comunicación corporativa, producción audiovisual y contenido educativo en Santiago, Chile." } = Astro.props;
+// SEO base del sitio: título, descripción, canonical, Open Graph y datos estructurados.
+// Cada página puede pasar title, description, image (ruta en /public) y jsonLd adicional.
+interface Props {
+  title?: string;
+  description?: string;
+  image?: string;
+  noindex?: boolean;
+  jsonLd?: Record<string, unknown> | Record<string, unknown>[];
+}
+
+const {
+  title = "Elefan | Comunicación interna y video corporativo, Santiago",
+  description = "Agencia creativa en Santiago: comunicación interna, video corporativo, cápsulas animadas de capacitación y eventos para empresas. Ideas con historia.",
+  image = "/images/slide_elefan_comunicaciones-internas.jpg",
+  noindex = false,
+  jsonLd,
+} = Astro.props;
+
+const site = Astro.site ?? new URL("https://elefan.cl");
+const path = Astro.url.pathname === "/" ? "/" : Astro.url.pathname.replace(/\/$/, "");
+const canonical = new URL(path, site).href;
+const ogImage = new URL(encodeURI(image), site).href;
+
+// ID de Google Analytics 4: se define como variable de entorno PUBLIC_GA_ID en Netlify.
+const GA_ID = import.meta.env.PUBLIC_GA_ID;
+
+const organization = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "Agencia Elefan",
+  legalName: "Asesorías Elefan SpA",
+  url: site.href,
+  logo: new URL("/images/logo-elefan.png", site).href,
+  slogan: "Donde hay una idea, hay un camino.",
+  foundingDate: "2017",
+  email: "hola@elefan.cl",
+  telephone: "+56996265972",
+  address: { "@type": "PostalAddress", addressLocality: "Santiago", addressRegion: "Región Metropolitana", addressCountry: "CL" },
+  areaServed: "CL",
+  sameAs: ["https://www.instagram.com/somos_elefan/", "https://www.linkedin.com/company/35703027/"],
+};
+const extraLd = jsonLd ? (Array.isArray(jsonLd) ? jsonLd : [jsonLd]) : [];
 ---
 
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es-CL">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content={description} />
     <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    {noindex && <meta name="robots" content="noindex, follow" />}
+
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="es_CL" />
+    <meta property="og:site_name" content="Agencia Elefan" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={ogImage} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
+
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="sitemap" href="/sitemap.xml" />
+
+    <script type="application/ld+json" set:html={JSON.stringify(organization)} />
+    {extraLd.map((ld) => <script type="application/ld+json" set:html={JSON.stringify(ld)} />)}
+
+    {GA_ID && (
+      <>
+        <script async src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}></script>
+        <script is:inline define:vars={{ GA_ID }}>
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){ dataLayer.push(arguments); }
+          window.gtag = gtag;
+          gtag('js', new Date());
+          gtag('config', GA_ID);
+        </script>
+      </>
+    )}
     <style>
       @font-face { font-family: 'Avenir'; src: url('/fonts/26301410506.ttf') format('truetype'); font-weight: 300; }
       @font-face { font-family: 'Avenir'; src: url('/fonts/25381880192.ttf') format('truetype'); font-weight: 400; }
@@ -27,5 +100,15 @@ const { title = "Elefan — Ideas audaces para empresas que inspiran", descripti
     <a href="https://wa.me/56996265972" target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp" style="position:fixed; bottom:24px; right:24px; z-index:999; background:#25d366; color:white; width:56px; height:56px; border-radius:50%; display:flex; align-items:center; justify-content:center; box-shadow:0 4px 16px rgba(0,0,0,0.25); text-decoration:none;">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="28" height="28"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
     </a>
+    <script is:inline>
+      // Mide los contactos: clics en WhatsApp y envíos de formulario (solo si GA4 está activo).
+      document.addEventListener('click', function (e) {
+        var a = e.target.closest && e.target.closest('a[href*="wa.me"]');
+        if (a && window.gtag) window.gtag('event', 'contacto_whatsapp', { pagina: location.pathname });
+      });
+      document.addEventListener('submit', function (e) {
+        if (window.gtag) window.gtag('event', 'generate_lead', { pagina: location.pathname, origen: 'formulario' });
+      });
+    </script>
   </body>
 </html>

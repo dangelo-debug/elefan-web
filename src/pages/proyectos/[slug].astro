@@ -34,9 +34,11 @@ const cleanDescription = project.description
   .trim();
 
 const extraVideos = project.extraVideos || [];
+const plainDescription = cleanDescription.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim();
+const metaDescription = plainDescription.length > 155 ? plainDescription.slice(0, 152).replace(/\s\S*$/, '') + '…' : plainDescription;
 ---
 
-<Layout title={project.title + " — Elefan"}>
+<Layout title={project.title + " | Elefan"} description={metaDescription} image={project.heroImage || project.image}>
   <Navbar />
   <div style="padding-top:80px">
     <section style="max-width:1000px; margin:0 auto; padding:80px 40px">

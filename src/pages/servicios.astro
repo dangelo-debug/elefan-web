@@ -2,6 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import Navbar from '../components/Navbar.astro';
 import '../styles/global.css';
+import { landings } from '../data/landings.js';
 
 const servicios = [
   { num: "01", titulo: "Comunicaciones Internas", texto: "Creamos y desarrollamos comunicaciones internas para apoyar sus estrategias corporativas, procesos e hitos. Generamos estrategias, soluciones creativas, conceptos, ideas y métodos con los que las empresas pueden fomentar y construir una cultura sólida, cercana y que logre una mayor conexión y compromiso con sus equipos." },
@@ -15,7 +16,7 @@ const servicios = [
 ];
 ---
 
-<Layout title="Servicios — Elefan">
+<Layout title="Servicios de comunicación interna, video y eventos | Elefan" description="Comunicación interna, capacitación, cultura, planes de incentivo, employee advocacy, producción audiovisual y eventos para empresas en Chile.">
   <Navbar />
 
   <!-- Hero -->
@@ -127,9 +128,28 @@ const servicios = [
     <p class="footer-page__copy">© 2025 Agencia Elefan</p>
   </footer>
 
+  <!-- Accesos directos a las páginas de soluciones -->
+  <section class="soluciones-srv">
+    <h2 class="section-title">¿Buscas algo específico?</h2>
+    <ul class="soluciones-srv__list">
+      {landings.map((l) => (
+        <li><a href={`/soluciones/${l.slug}`}><strong>{l.nombreCorto}</strong><span>{l.h1}</span></a></li>
+      ))}
+    </ul>
+  </section>
+
 </Layout>
 
 <style>
+/* ---- SOLUCIONES ---- */
+.soluciones-srv { padding: 40px 80px 110px; max-width: 1100px; margin: 0 auto; }
+.soluciones-srv__list { list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 40px; }
+.soluciones-srv__list a { display: flex; flex-direction: column; gap: 8px; padding: 28px; background: #f8f5ee; color: #1a1a1a; text-decoration: none; border-left: 6px solid #f5c518; height: 100%; }
+.soluciones-srv__list a:hover { background: #f5c518; }
+.soluciones-srv__list strong { font-size: 1.2rem; font-weight: 900; }
+.soluciones-srv__list span { font-weight: 300; color: #444; line-height: 1.6; }
+@media (max-width: 768px) { .soluciones-srv { padding: 24px 24px 72px; } .soluciones-srv__list { grid-template-columns: 1fr; } }
+
 /* ---- HERO ---- */
 .hero-srv {
   position: relative;
