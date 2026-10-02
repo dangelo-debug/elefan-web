@@ -2,10 +2,10 @@
 // Para editar textos, casos o preguntas, basta con modificar este archivo.
 
 export const pasos = [
-  { titulo: "Conversamos", texto: "Una llamada breve para entender el objetivo, la audiencia y los plazos. Sin compromiso." },
-  { titulo: "Te proponemos una idea", texto: "Un concepto creativo con alternativas de alcance, para que elijas la que calza con tu presupuesto." },
-  { titulo: "Producimos", texto: "Guion, diseño, rodaje, animación o puesta en escena, con revisiones acordadas desde el inicio." },
-  { titulo: "Entregamos y acompañamos", texto: "Te entregamos todo listo para usar y te ayudamos a que llegue bien a tu gente." },
+  { titulo: "Conversamos", icono: "/images/soluciones/icono-conversamos.svg", texto: "Una llamada breve para entender el objetivo, la audiencia y los plazos. Sin compromiso." },
+  { titulo: "Te proponemos una idea", icono: "/images/soluciones/icono-idea.svg", texto: "Un concepto creativo con alternativas de alcance, para que elijas la que calza con tu presupuesto." },
+  { titulo: "Producimos", icono: "/images/soluciones/icono-producimos.svg", texto: "Guion, diseño, rodaje, animación o puesta en escena, con revisiones acordadas desde el inicio." },
+  { titulo: "Entregamos y acompañamos", icono: "/images/soluciones/icono-entregamos.svg", texto: "Te entregamos todo listo para usar y te ayudamos a que llegue bien a tu gente." },
 ];
 
 export const logos = [
@@ -27,25 +27,27 @@ const preguntaPrecio = {
 export const landings = [
   {
     slug: "eventos-corporativos-fin-de-ano",
-    nombreCorto: "Fiestas de fin de año y eventos",
-    seoTitle: "Fiesta de fin de año y eventos corporativos | Elefan",
-    seoDescription: "Diseñamos y producimos fiestas de fin de año, premiaciones y kick-off para empresas en Santiago. Concepto, show, video y activaciones con sello propio.",
-    h1: "La fiesta de fin de año que tu equipo va a recordar",
-    intro: "Diseñamos el concepto, el show, los videos y las activaciones de tu cierre de año. Una celebración con historia propia, pensada para tu gente y no armada por catálogo.",
-    heroImage: "/images/projects/DSC_0190.jpg",
-    heroAlt: "Show en el escenario durante la fiesta de fin de año de Jardines Vitamina, producida por Elefan",
+    nombreCorto: "Cierre de año",
+    seoTitle: "Cierre de año para empresas: eventos y regalos | Elefan",
+    seoDescription: "Diseñamos y producimos el cierre de año de tu empresa: fiesta, paseos, regalos corporativos, premiaciones y video del año, con un concepto propio.",
+    h1: "El cierre de año que tu equipo va a recordar",
+    intro: "Diseñamos y producimos todo el cierre de año de tu empresa: la fiesta, el paseo, los regalos, los reconocimientos y el video del año. Una experiencia con un concepto propio, pensada para tu gente y no armada por catálogo.",
+    heroImage: "/images/projects/foto-equipo.jpg",
+    heroPosition: "50% 55%",
+    heroAlt: "Equipo de Red de Jardines Vitamina reunido en una celebración producida por Elefan",
     aviso: "Las fechas de diciembre se toman temprano. Mientras antes conversemos, más espacio hay para la idea.",
     problemaTitulo: "El cierre de año es el momento en que toda la empresa está escuchando",
     problema: [
-      "Es la única instancia del año en que todos están en la misma sala y con ganas de celebrar. Pero muchas veces se resuelve con un salón, un DJ y un video de fotos con música.",
+      "Es uno de los pocos momentos en que todos se detienen a mirar el año vivido. Pero muchas veces se resuelve en piloto automático: un salón, un regalo genérico y un video de fotos con música.",
       "Ahí se pierde una oportunidad enorme: reconocer a las personas, cerrar el año con sentido y dejar instalado el ánimo para lo que viene.",
     ],
     formatos: [
-      { titulo: "Concepto y puesta en escena", texto: "Una idea central que ordena todo: la ambientación, la conducción, la gráfica y el relato de la noche." },
-      { titulo: "Show y momentos internos", texto: "Números artísticos, presentaciones de las áreas y dinámicas donde el equipo es el protagonista." },
+      { titulo: "Concepto del cierre de año", texto: "Una idea central que conecta todo: la celebración, los regalos, la gráfica y los mensajes del año." },
+      { titulo: "Fiesta y show", texto: "Puesta en escena, conducción, números artísticos y momentos donde el equipo es el protagonista." },
+      { titulo: "Paseos de fin de año y familiares", texto: "Jornadas para el equipo o para compartir con las familias, con actividades pensadas para todas las edades." },
+      { titulo: "Regalos corporativos", texto: "Regalos con diseño y mensaje propio, que se sienten pensados para cada persona y no elegidos de un catálogo." },
       { titulo: "Video de cierre de año", texto: "La historia del año contada desde las personas, no un resumen de fotos con música de fondo." },
       { titulo: "Premiaciones y reconocimientos", texto: "Categorías, galardones y momentos diseñados para que reconocer se sienta especial." },
-      { titulo: "Kick-off y lanzamientos", texto: "Si el próximo año parte con un nuevo plan, una escuela o una estrategia, convertimos ese inicio en una experiencia." },
     ],
     casos: [
       { slug: "fiesta-red-de-jardines-vitamina", texto: "Más de 700 personas, un show con números artísticos y presentaciones de cada área de la empresa." },
@@ -53,12 +55,12 @@ export const landings = [
       { slug: "proyecto-levis-fest-evento-levis-chile", texto: "Un festival propio en el Parque Titanium, con música en vivo, customización de ropa y actividades libres." },
     ],
     faq: [
-      { q: "¿Con cuánta anticipación hay que empezar?", a: "Depende del tamaño del evento: mientras antes, más alternativas de lugar, show y producción. Si tu fecha está cerca, escríbenos igual y te decimos con honestidad qué alcanza a hacerse bien." },
+      { q: "¿Con cuánta anticipación hay que empezar?", a: "Depende de lo que incluya tu cierre de año: mientras antes, más alternativas de lugar, producción y regalos. Si tu fecha está cerca, escríbenos igual y te decimos con honestidad qué alcanza a hacerse bien." },
+      { q: "¿Podemos contratar solo una parte, como los regalos o el video?", a: "Sí. Puedes encargarnos el cierre de año completo o solo una pieza, como los regalos corporativos, el video del año, la premiación o el paseo." },
       { q: "¿Se encargan también del lugar, la comida y la técnica?", a: "Podemos coordinar la producción completa o trabajar junto a tu equipo y tus proveedores actuales. Lo definimos según lo que ya tengas resuelto." },
-      { q: "¿Trabajan con empresas de distintos tamaños?", a: "Sí. Hemos producido desde encuentros para 200 líderes hasta celebraciones para más de 700 personas." },
       preguntaPrecio,
     ],
-    whatsapp: "Hola Elefan, vi su página de eventos de fin de año y quiero conversar sobre la celebración de nuestra empresa.",
+    whatsapp: "Hola Elefan, vi su página de cierre de año y quiero conversar sobre el de nuestra empresa.",
   },
   {
     slug: "video-corporativo",
@@ -150,7 +152,7 @@ export const landings = [
       { titulo: "Identidad visual interna", texto: "Nombre, gráfica y tono para programas, áreas e iniciativas que necesitan una marca propia." },
     ],
     casos: [
-      { slug: "creacion-de-personajes-conectando-valores-y-emociones-en-la-comunicacion-corporativa", texto: "Personajes que dieron vida a los valores de una empresa y que evolucionaron junto con ella." },
+      { slug: "creacion-de-personajes-conectando-valores-y-emociones-en-la-comunicacion-corporativa", imagen: "/images/projects/valores-web-2.png", texto: "Personajes que dieron vida a los valores de una empresa y que evolucionaron junto con ella." },
       { slug: "insiders-potenciando-la-voz-interna-en-employee-advocacy", texto: "Un programa de employee advocacy que convirtió a los colaboradores de una empresa tecnológica en embajadores." },
       { slug: "proyecto-humind-marca-2", texto: "Un hexágono como concepto para presentar el propósito de una empresa y conectar sus distintas áreas." },
     ],
