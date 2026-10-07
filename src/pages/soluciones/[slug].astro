@@ -11,7 +11,7 @@ export function getStaticPaths() {
 
 const { landing } = Astro.props;
 const site = Astro.site ?? new URL('https://elefan.cl');
-const pageUrl = new URL(`/soluciones/${landing.slug}`, site).href;
+const pageUrl = new URL(`/soluciones/${landing.slug}/`, site).href;
 
 const casos = landing.casos
   .map((c) => {
@@ -43,7 +43,7 @@ const jsonLd = [
     '@type': 'BreadcrumbList',
     itemListElement: [
       { '@type': 'ListItem', position: 1, name: 'Inicio', item: site.href },
-      { '@type': 'ListItem', position: 2, name: 'Servicios', item: new URL('/servicios', site).href },
+      { '@type': 'ListItem', position: 2, name: 'Servicios', item: new URL('/servicios/', site).href },
       { '@type': 'ListItem', position: 3, name: landing.nombreCorto, item: pageUrl },
     ],
   },
@@ -57,7 +57,7 @@ const jsonLd = [
     <div class="sol-hero-bg"><section class="sol-hero">
       <div class="sol-hero__copy">
         <nav class="sol-crumbs" aria-label="Ruta de navegación">
-          <a href="/servicios">Servicios</a> <span aria-hidden="true">/</span> <span>{landing.nombreCorto}</span>
+          <a href="/servicios/">Servicios</a> <span aria-hidden="true">/</span> <span>{landing.nombreCorto}</span>
         </nav>
         <h1 class="sol-hero__title">{landing.h1}</h1>
         <p class="sol-hero__intro">{landing.intro}</p>
@@ -104,7 +104,7 @@ const jsonLd = [
         <h2 class="sol-h2">Casos</h2>
         <div class="sol-casos__grid">
           {casos.map((c) => (
-            <a class="sol-caso" href={`/proyectos/${c.slug}`}>
+            <a class="sol-caso" href={`/proyectos/${c.slug}/`}>
               <img src={c.imagen} alt="" loading="lazy" />
               <h3>{c.titulo}</h3>
               <p>{c.texto}</p>
@@ -170,8 +170,8 @@ const jsonLd = [
     <nav class="sol-otras sol-wrap" aria-label="Otras soluciones">
       <h2 class="sol-h2">También hacemos</h2>
       <ul>
-        {otras.map((o) => <li><a href={`/soluciones/${o.slug}`}>{o.nombreCorto}</a></li>)}
-        <li><a href="/servicios">Todos los servicios</a></li>
+        {otras.map((o) => <li><a href={`/soluciones/${o.slug}/`}>{o.nombreCorto}</a></li>)}
+        <li><a href="/servicios/">Todos los servicios</a></li>
       </ul>
     </nav>
 

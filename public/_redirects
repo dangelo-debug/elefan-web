@@ -1,23 +1,23 @@
 # Redirecciones permanentes desde el sitio WordPress anterior (Netlify)
 # Proyectos: /portfolio/slug  ->  /proyectos/slug
-/portfolio/:slug    /proyectos/:slug    301
+/portfolio/:slug    /proyectos/:slug/    301
 /portfolio          /#portafolio        301
 /proyectos          /#portafolio        301
-/soluciones         /servicios          301
+/soluciones         /servicios/          301
 
 # Entradas del blog que en WordPress vivían en la raíz
-/el-equilibrio-en-la-productividad-una-vision-mas-humana-y-sostenible    /blog/el-equilibrio-en-la-productividad-una-vision-mas-humana-y-sostenible    301
-/la-escucha-adaptativa-la-clave-para-la-comunicacion-en-el-mundo-creativo    /blog/la-escucha-adaptativa-la-clave-para-la-comunicacion-en-el-mundo-creativo    301
-/microlearning-la-respuesta-creativa-para-el-aprendizaje-agil    /blog/microlearning-la-respuesta-creativa-para-el-aprendizaje-agil    301
-/la-curiosidad-nuestra-herramienta-mas-poderosa-en-el-mundo-creativo    /blog/la-curiosidad-nuestra-herramienta-mas-poderosa-en-el-mundo-creativo    301
+/el-equilibrio-en-la-productividad-una-vision-mas-humana-y-sostenible    /blog/el-equilibrio-en-la-productividad-una-vision-mas-humana-y-sostenible/    301
+/la-escucha-adaptativa-la-clave-para-la-comunicacion-en-el-mundo-creativo    /blog/la-escucha-adaptativa-la-clave-para-la-comunicacion-en-el-mundo-creativo/    301
+/microlearning-la-respuesta-creativa-para-el-aprendizaje-agil    /blog/microlearning-la-respuesta-creativa-para-el-aprendizaje-agil/    301
+/la-curiosidad-nuestra-herramienta-mas-poderosa-en-el-mundo-creativo    /blog/la-curiosidad-nuestra-herramienta-mas-poderosa-en-el-mundo-creativo/    301
 
 # Rutas típicas de WordPress
-/category/*         /blog               301
-/tag/*              /blog               301
-/author/*           /somos              301
-/nosotros           /somos              301
-/quienes-somos      /somos              301
-/contactanos        /contacto           301
-/feed               /blog               301
+/category/*         /blog/               301
+/tag/*              /blog/               301
+/author/*           /somos/              301
+/nosotros           /somos/              301
+/quienes-somos      /somos/              301
+/contactanos        /contacto/           301
+/feed               /blog/               301
 /wp-login.php       /                   301
 /wp-admin/*         /                   301

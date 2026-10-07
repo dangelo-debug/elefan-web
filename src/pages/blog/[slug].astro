@@ -49,7 +49,7 @@ const jsonLd = {
   ...(post.date ? { datePublished: post.date } : {}),
   author: { '@type': 'Organization', name: 'Agencia Elefan' },
   publisher: { '@type': 'Organization', name: 'Agencia Elefan', logo: { '@type': 'ImageObject', url: new URL('/images/logo-elefan.png', site).href } },
-  mainEntityOfPage: new URL(`/blog/${post.slug}`, site).href,
+  mainEntityOfPage: new URL(`/blog/${post.slug}/`, site).href,
 };
 ---
 
@@ -76,7 +76,7 @@ const jsonLd = {
         </p>
       )}
       <div class="post__volver">
-        <a href="/blog">← Volver al blog</a>
+        <a href="/blog/">← Volver al blog</a>
       </div>
     </article>
   </div>

@@ -18,7 +18,7 @@ const {
 } = Astro.props;
 
 const site = Astro.site ?? new URL("https://elefan.cl");
-const path = Astro.url.pathname === "/" ? "/" : Astro.url.pathname.replace(/\/$/, "");
+const path = Astro.url.pathname.endsWith("/") ? Astro.url.pathname : Astro.url.pathname + "/";
 const canonical = new URL(path, site).href;
 const ogImage = new URL(encodeURI(image), site).href;
 

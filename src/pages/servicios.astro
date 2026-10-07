@@ -122,8 +122,8 @@ const servicios = [
     <img src="/images/logo-elefan.png" alt="Elefan" class="footer-page__logo" />
     <nav class="footer-page__nav">
       <a href="/" class="footer-page__link">Home</a>
-      <a href="/proyectos" class="footer-page__link">Proyectos</a>
-      <a href="/blog" class="footer-page__link">Blog</a>
+      <a href="/#portafolio" class="footer-page__link">Proyectos</a>
+      <a href="/blog/" class="footer-page__link">Blog</a>
     </nav>
     <p class="footer-page__copy">© 2025 Agencia Elefan</p>
   </footer>
@@ -133,7 +133,7 @@ const servicios = [
     <h2 class="section-title">¿Buscas algo específico?</h2>
     <ul class="soluciones-srv__list">
       {landings.map((l) => (
-        <li><a href={`/soluciones/${l.slug}`}><strong>{l.nombreCorto}</strong><span>{l.h1}</span></a></li>
+        <li><a href={`/soluciones/${l.slug}/`}><strong>{l.nombreCorto}</strong><span>{l.h1}</span></a></li>
       ))}
     </ul>
   </section>
